@@ -1487,10 +1487,12 @@
    "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
   },
   "summary.json": {
-   "sha256": "c38e0c5e9de47edf5996d356320cf6045c91824b058bd5b4e1922a79214317ee",
-   "command": "python3 sim/make_figures.py",
-   "parameters": {},
-   "commit": "d65acbe",
+   "sha256": "4299c8d8a041d4c307128cef2a456105495deb58ff847913910c3cf819b2f976",
+   "command": "python -m vods figures",
+   "parameters": {
+    "script": "make_figures.py"
+   },
+   "commit": "8701ee2",
    "simulator_modified": false,
    "environment": {
     "python": "3.13.18",
@@ -1499,8 +1501,7 @@
     "matplotlib": "3.11.2",
     "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
    },
-   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
-   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+   "created_utc": "2026-11-16T08:54:27Z"
   }
  }
 }

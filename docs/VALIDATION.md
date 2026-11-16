@@ -1,6 +1,6 @@
 # Validation report
 
-4D-VODS 1.1.0 · generated 2026-11-16 by `python -m vods validate --report` · commit ffba8b3 · Python 3.13.18, NumPy 2.5.3, SciPy 1.18.1
+4D-VODS 1.1.0 · generated 2026-11-16 by `python -m vods validate --report` · commit 8701ee2 · Python 3.13.18, NumPy 2.5.3, SciPy 1.18.1
 
 **9 of 9 checks pass.** Each check compares the simulator with a reference that does not come from the simulator: a closed-form result of diffraction theory, an independent library, or a scaling law the physics must obey. The same checks run as tests on every push (`tests/test_validation.py`).
 
