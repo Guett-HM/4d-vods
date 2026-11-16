@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4D-VODS – optical data storage in glass, readable with a cheap microscope</title>
+<meta name="description" content="Open simulation study by Hakim Guettal: multi-level optical symbols for archival storage in glass and a self-aligning micro-matrix (SAMM) code that low-cost microscope cameras can read at any rotation.">
+<meta name="author" content="Hakim Guettal">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Literata:opsz,wght@7..72,400;7..72,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --glass: #eef3f5;        /* page: the medium itself */
+    --frost: #dce6eb;        /* panels: frosted glass */
+    --edge:  #c3d1d9;        /* hairlines */
+    --ink:   #1d2733;        /* text */
+    --muted: #5a6876;        /* secondary text */
+    --violet:#4b2fd6;        /* 405 nm: the read and write light */
+    --violet-soft: #e4e0fb;
+    --burn:  #2a3340;        /* darkest engraving */
+    --sans: "Archivo", "Helvetica Neue", Arial, sans-serif;
+    --serif: "Literata", Georgia, "Times New Roman", serif;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--glass); color: var(--ink);
+    font-family: var(--serif); font-size: 18px; line-height: 1.65;
+  }
+  a { color: var(--violet); text-underline-offset: 3px; }
+  a:hover { text-decoration-thickness: 2px; }
+  :focus-visible { outline: 3px solid var(--violet); outline-offset: 3px; border-radius: 2px; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 28px; }
+  .prose { max-width: 68ch; }
+  h1, h2, h3 { font-family: var(--sans); color: var(--ink); line-height: 1.12; margin: 0; }
+  h1 { font-size: clamp(2.3rem, 5.2vw, 4.1rem); font-weight: 760; font-stretch: 78%; letter-spacing: -0.015em; }
+  h2 { font-size: clamp(1.6rem, 2.6vw, 2.1rem); font-weight: 700; font-stretch: 85%; margin-bottom: 0.7em; }
+  h3 { font-size: 1.12rem; font-weight: 650; font-stretch: 95%; margin-bottom: 0.35em; }
+  .prose h3 { margin-top: 1.8em; }
+  p { margin: 0 0 1em; }
+
+  /* ---------- top bar ---------- */
+  header.bar { border-bottom: 1px solid var(--edge); }
+  header.bar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 60px; flex-wrap: wrap; }
+  .mark { font-family: var(--sans); font-weight: 800; font-stretch: 75%; font-size: 1.25rem; letter-spacing: 0.01em; text-decoration: none; color: var(--ink); }
+  nav ul { list-style: none; display: flex; gap: 22px; margin: 0; padding: 0; flex-wrap: wrap; }
+  nav a { font-family: var(--sans); font-size: 0.95rem; color: var(--ink); text-decoration: none; }
+  nav a:hover { color: var(--violet); }
+
+  /* ---------- hero ---------- */
+  .hero { padding: 64px 0 56px; }
+  .hero .wrap { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr); gap: 56px; align-items: center; }
+  .lede { font-size: 1.2rem; color: var(--ink); max-width: 36ch; margin-top: 22px; }
+  .byline { font-family: var(--sans); color: var(--muted); font-size: 0.98rem; margin-top: 4px; }
+  .about { font-size: 0.95rem; font-style: italic; color: var(--muted); max-width: 52ch; line-height: 1.55; margin: 6px 0 0; }
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+  .btn { font-family: var(--sans); font-weight: 600; font-size: 1rem; text-decoration: none; padding: 12px 18px; border-radius: 6px; border: 1.5px solid var(--violet); }
+  .btn.primary { background: var(--violet); color: #fff; }
+  .btn.primary:hover { background: #3b22b8; }
+  .btn.quiet { color: var(--violet); background: transparent; }
+  .btn.quiet:hover { background: var(--violet-soft); }
+
+  .demo { background: var(--frost); border-radius: 10px; padding: 22px 22px 18px; }
+  .stage { position: relative; width: 100%; aspect-ratio: 1 / 1; max-width: 440px; margin: 0 auto; }
+  .stage canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+  #frame { transition: filter 0.35s ease; }
+  #frame.blurred { filter: blur(2.2px) contrast(0.85); }
+  .controls { margin-top: 14px; font-family: var(--sans); font-size: 0.95rem; }
+  .controls label { display: flex; align-items: center; gap: 10px; margin: 8px 0; cursor: pointer; }
+  .controls input[type=range] { flex: 1; accent-color: var(--violet); }
+  .controls input[type=checkbox] { width: 18px; height: 18px; accent-color: var(--violet); }
+  .angle { min-width: 3.4em; text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; }
+  .demo .note { font-size: 0.86rem; color: var(--muted); margin: 10px 0 0; line-height: 1.5; }
+
+  /* ---------- sections ---------- */
+  section.block { padding: 64px 0; border-top: 1px solid var(--edge); }
+  .status { background: var(--violet-soft); border-left: 4px solid var(--violet); padding: 14px 18px; border-radius: 4px; font-size: 1rem; margin: 0 0 28px; max-width: 68ch; }
+
+  .layers { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 10px; border: 1px solid var(--edge); border-radius: 10px; overflow: hidden; }
+  .layer { padding: 26px 28px; background: #f6f9fa; }
+  .layer + .layer { border-left: 1px solid var(--edge); }
+  .layer dl { margin: 14px 0 0; display: grid; grid-template-columns: max-content 1fr; gap: 6px 16px; font-size: 0.98rem; }
+  .layer dt { font-family: var(--sans); color: var(--muted); }
+  .layer dd { margin: 0; }
+  .big { font-family: var(--sans); font-weight: 760; font-stretch: 80%; font-size: 2.4rem; line-height: 1; color: var(--violet); margin: 4px 0 2px; }
+  .big small { font-size: 1rem; font-weight: 600; color: var(--muted); font-stretch: 100%; }
+
+  figure { margin: 36px 0 0; }
+  figure img { width: 100%; height: auto; display: block; border-radius: 8px; background: #fff; border: 1px solid var(--edge); }
+  figcaption { font-size: 0.95rem; color: var(--muted); margin-top: 10px; max-width: 75ch; }
+  .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+
+  table { border-collapse: collapse; width: 100%; font-size: 0.97rem; margin: 18px 0 8px; }
+  caption { text-align: left; font-family: var(--sans); font-weight: 650; font-size: 1.05rem; padding-bottom: 8px; }
+  th, td { text-align: left; padding: 9px 12px 9px 0; border-bottom: 1px solid var(--edge); vertical-align: top; }
+  th { font-family: var(--sans); font-weight: 600; color: var(--muted); font-size: 0.92rem; }
+  td.num { font-variant-numeric: tabular-nums; }
+  tr.lead td { font-weight: 600; }
+  .tablewrap { overflow-x: auto; }
+
+  .uses { columns: 2; column-gap: 48px; padding: 0; list-style: none; margin: 0; }
+  .uses li { break-inside: avoid; margin: 0 0 18px; }
+  .uses strong { font-family: var(--sans); font-weight: 650; display: block; }
+
+  pre { background: var(--ink); color: #e9eef1; padding: 18px 20px; border-radius: 8px; overflow-x: auto; font-size: 0.9rem; line-height: 1.55; }
+  code { font-family: "SF Mono", Menlo, Consolas, monospace; }
+  .cite { background: #f6f9fa; border: 1px solid var(--edge); border-radius: 8px; padding: 16px 18px; font-size: 0.98rem; }
+
+  footer { border-top: 1px solid var(--edge); padding: 30px 0 48px; color: var(--muted); font-size: 0.92rem; font-family: var(--sans); }
+
+  @media (max-width: 860px) {
+    .hero .wrap, .pair, .layers { grid-template-columns: 1fr; }
+    .layer + .layer { border-left: 0; border-top: 1px solid var(--edge); }
+    .uses { columns: 1; }
+    .hero { padding-top: 40px; }
+    nav ul { gap: 14px; }
+    nav a { font-size: 0.88rem; }
+    header.bar .wrap { padding-top: 10px; padding-bottom: 10px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    #frame { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="mark" href="#top">4D-VODS</a>
+    <nav aria-label="Sections">
+      <ul>
+        <li><a href="#idea">The idea</a></li>
+        <li><a href="#results">Results</a></li>
+        <li><a href="#uses">Uses</a></li>
+        <li><a href="#reproduce">Reproduce</a></li>
+        <li><a href="#cite">Cite</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" aria-labelledby="title">
+    <div class="wrap">
+      <div>
+        <h1 id="title">Data in glass that a cheap microscope can read at any angle</h1>
+        <p class="lede">An open simulation study of archival storage in laser-written glass, with a self-aligning 2D code for low-cost readers.</p>
+        <p class="byline">Hakim Guettal, version 1.0, November 2026</p>
+        <p class="about">I am not a professional physicist. 4D-VODS started as a geometric intuition (storing data in the shape of engraved symbols) and grew into this conceptual study and simulator, built with the help of AI tools on standard diffraction optics. Corrections from specialists are very welcome.</p>
+        <div class="actions">
+          <a class="btn primary" href="docs/4D-VODS_White_Paper_v1.0.pdf">Read the white paper (PDF)</a>
+          <a class="btn quiet" href="docs/4D-VODS_Technical_Note_TN-001.pdf">Technical note</a>
+          <a class="btn quiet" id="repo-link" href="README.md">Source code</a>
+        </div>
+      </div>
+
+      <div class="demo" aria-labelledby="demo-title">
+        <h3 id="demo-title">Turn the frame</h3>
+        <div class="stage">
+          <canvas id="frame" role="img" aria-label="A 24 by 24 SAMM frame of grey dots with a bullseye in each corner, shown at the selected rotation"></canvas>
+          <canvas id="overlay" aria-hidden="true"></canvas>
+        </div>
+        <div class="controls">
+          <label>Rotation
+            <input id="rot" type="range" min="0" max="359" value="27" aria-describedby="rot-out">
+            <output id="rot-out" class="angle" for="rot">27°</output>
+          </label>
+          <label><input id="blur" type="checkbox"> Blur it like a cheap camera would</label>
+          <label><input id="show" type="checkbox" checked> Show what the reader looks for</label>
+        </div>
+        <p class="note">Illustration of the frame layout. The four bullseyes look the same at every angle, so a reader finds them with one correlation and needs no motorised stage. In the simulator they are detected in the camera image; here they are drawn from the known geometry.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="idea" aria-labelledby="idea-title">
+    <div class="wrap">
+      <h2 id="idea-title">Two layers in one piece of glass</h2>
+      <p class="status">Status: concept stage, checked only in simulation. No physical sample has been written or read yet. The numbers compare design options under the same modelled physics; they are not claims about a finished device.</p>
+      <div class="prose">
+        <p>Glass written with a femtosecond laser can keep data for thousands of years without power. The weak point is the reader: today's glass and ceramic archives need laboratory optics. 4D-VODS pairs a dense data layer for the data centre with a code that an ordinary microscope camera can find, orient and decode on its own.</p>
+      </div>
+      <div class="layers">
+        <div class="layer">
+          <h3>High-density data layer</h3>
+          <p class="big">42.6 <small>bits per µm²</small></p>
+          <p>About 47 GB per layer of a 12 cm disc, 1.9 times a Blu-ray layer.</p>
+          <dl>
+            <dt>Symbol</dt><dd>Round dot with 8 depths × 2 reflectances (APSK-16, 4 bits)</dd>
+            <dt>Pitch</dt><dd>300 nm</dd>
+            <dt>Reader</dt><dd>Interferometric microscope, 405 nm, NA 0.90</dd>
+          </dl>
+        </div>
+        <div class="layer">
+          <h3>Self-aligning micro-matrix (SAMM)</h3>
+          <p class="big">599 <small>of 600 frames aligned</small></p>
+          <p>At any rotation, ±3% scale and tilted light, read by bright-field cameras from a USB microscope to a 40× objective.</p>
+          <dl>
+            <dt>Symbol</dt><dd>Square dot with 4 grey levels (2 bits)</dd>
+            <dt>Pitch</dt><dd>1.1 × λ/NA of the reader (0.69–1.78 µm)</dd>
+            <dt>Density</dt><dd>Up to 3.75 bits per µm² (about 47 MB per cm²)</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="results" aria-labelledby="results-title">
+    <div class="wrap">
+      <h2 id="results-title">What the simulation found</h2>
+      <div class="prose">
+        <p>The project started from an 8-bit "Voxel-Wedge": one asymmetric engraving whose direction, depth, curvature and reflectance each carry bits. At 150 nm it would hold 356 bits per µm². The simulator shows why it cannot: the optics resolve about 225 nm, so shape-encoded bits vanish first. Round multi-level dots carry more information at small pitch.</p>
+      </div>
+
+      <figure>
+        <img src="figures/fig0_symbols.png" alt="Three wedge symbols and two round dots as written, as read at 500 nm pitch, and as read at 150 nm pitch, where all of them look like the same faint blur" loading="lazy">
+        <figcaption>At 500 nm each symbol leaves a distinct footprint in the reader's image; at 150 nm every symbol fades into the same blur.</figcaption>
+      </figure>
+
+      <div class="pair">
+        <figure>
+          <img src="figures/fig1_density_vs_pitch.png" alt="Chart of information density against pitch: APSK-16 peaks at 42.6 bits per square micron at 300 nm, the Voxel-Wedge at about 27 at 500 nm, far below the naive estimate" loading="lazy">
+          <figcaption>Information density against pitch. The naive estimate (dashed) is out of reach; APSK-16 dots peak at 300 nm.</figcaption>
+        </figure>
+        <figure>
+          <img src="figures/fig7_sensitivity.png" alt="Chart showing that APSK-16 stays ahead of the Voxel-Wedge at 5, 10 and 20 percent writing variability" loading="lazy">
+          <figcaption>The ranking holds whether the laser writes with 5%, 10% or 20% variability.</figcaption>
+        </figure>
+      </div>
+
+      <figure>
+        <img src="figures/fig6_samm_pipeline.png" alt="A SAMM frame written at 27 degrees, the blurred camera image with the four finders circled, and the straightened decoded grid with one error" loading="lazy">
+        <figcaption>One simulated SAMM frame read with a budget 20× objective: written, photographed under tilted light, then found, straightened and decoded (507 of 508 data cells correct).</figcaption>
+      </figure>
+
+      <div class="tablewrap">
+        <table>
+          <caption>SAMM operating points at a pitch of 1.1 × λ/NA, 200 randomly rotated frames each</caption>
+          <thead>
+            <tr><th scope="col">Reader</th><th scope="col">NA</th><th scope="col">Pitch</th><th scope="col">Frames aligned</th><th scope="col">Symbol error</th><th scope="col">Data per cm²</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>USB or phone-clip microscope</td><td class="num">0.25</td><td class="num">1.78 µm</td><td class="num">200 of 200</td><td class="num">0.02%</td><td class="num">about 7 MB</td></tr>
+            <tr><td>Budget 20× objective</td><td class="num">0.45</td><td class="num">0.99 µm</td><td class="num">199 of 200</td><td class="num">0.25%</td><td class="num">about 22 MB</td></tr>
+            <tr><td>Budget 40× objective</td><td class="num">0.65</td><td class="num">0.69 µm</td><td class="num">200 of 200</td><td class="num">0.02%</td><td class="num">about 47 MB</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="prose">
+        <h3>Ideas that did not survive</h3>
+        <p>Differential angle coding handles rotation but makes about three times more errors than a known pilot symbol every 16. Run-length glyphs written on the medium lose to ordinary software compression by 4 to 6 times on real data. Both results are in the white paper, together with everything the model leaves out.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="uses" aria-labelledby="uses-title">
+    <div class="wrap">
+      <h2 id="uses-title">Where it could be useful</h2>
+      <ul class="uses">
+        <li><strong>Product marking and anti-counterfeiting</strong>A microscopic code in glass, sapphire or ceramic on aircraft parts, medicines or artworks, checked with a handheld reader at any orientation.</li>
+        <li><strong>Data on the object itself</strong>Serial numbers, calibration data or a manual engraved on a sensor window or watch crystal, readable for the object's whole life.</li>
+        <li><strong>Long-term archives</strong>National archives, libraries and film heritage, where the SAMM layer can carry the instructions needed to decode the rest.</li>
+        <li><strong>Data-centre cold storage</strong>Backups and datasets written once, kept without power and never migrated.</li>
+        <li><strong>Records that must not change</strong>Legal, financial and medical records that cannot be altered or encrypted by ransomware once written.</li>
+        <li><strong>Time capsules</strong>Archives meant to be read with simple optics long after today's computers are gone.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="block" id="reproduce" aria-labelledby="repro-title">
+    <div class="wrap">
+      <h2 id="repro-title">Reproduce every number</h2>
+      <div class="prose">
+        <p>The simulator is plain Python with fixed random seeds, so a full run gives exactly the published results. The quick mode checks that everything works in a couple of minutes.</p>
+      </div>
+<pre><code>pip install -r requirements.txt
+pytest -q tests                      # sanity tests
+
+QUICK=1 python3 sim/vods_sim.py      # quick check, writes to results_quick/
+QUICK=1 python3 sim/samm_sim.py
+
+python3 sim/vods_sim.py              # full data-layer study
+python3 sim/samm_sim.py              # full SAMM study
+python3 sim/make_figures.py          # all charts</code></pre>
+      <div class="prose">
+        <p>The raw results behind every figure are in the <a href="results/">results</a> folder, and the design history from the first hand-drawn triangles is in <a href="HISTORY.md">HISTORY.md</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="cite" aria-labelledby="cite-title">
+    <div class="wrap">
+      <h2 id="cite-title">Cite this work</h2>
+      <p class="cite prose">Guettal, H. (2026). <em>4D-VODS: optical data storage in glass with a self-aligning code for low-cost readers</em>, version 1.0.0. Zenodo. <span id="doi">DOI assigned on release.</span></p>
+      <div class="prose">
+        <p>Related work this study builds on: Microsoft Project Silica, 5D optical storage from the University of Southampton, Cerabyte ceramic storage, holographic storage, and QR, Data Matrix and Aztec codes. Every result can be checked by re-running the code.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>© 2026 Hakim Guettal. Code under the <a href="LICENSE">MIT License</a>; documents and figures under <a href="docs/LICENSE.md">CC BY 4.0</a>.</p>
+  </div>
+</footer>
+
+<script>
+  // Set these after publishing; they are left empty in the first release.
+  const REPO_URL = "https://github.com/GuettHM/4d-vods";
+  const DOI = "";        // e.g. "10.5281/zenodo.1234567"
+
+  if (REPO_URL) document.getElementById("repo-link").href = REPO_URL;
+  if (DOI) {
+    const d = document.getElementById("doi");
+    d.textContent = "";
+    const a = document.createElement("a");
+    a.href = "https://doi.org/" + DOI; a.textContent = "https://doi.org/" + DOI;
+    d.appendChild(a);
+  }
+
+  // ---- SAMM frame illustration (same layout as sim/samm_sim.py) ----
+  const N = 24;
+  const LEVELS = [1.0, 0.7, 0.4, 0.1];          // reflectance of the four grey levels
+  function rng(seed) {                           // small deterministic PRNG (mulberry32)
+    return function () {
+      seed |= 0; seed = seed + 0x6D2B79F5 | 0;
+      let t = Math.imul(seed ^ seed >>> 15, 1 | seed);
+      t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
+      return ((t ^ t >>> 14) >>> 0) / 4294967296;
+    };
+  }
+  const rand = rng(2026);
+  const role = [], level = [];
+  for (let r = 0; r < N; r++) {
+    role.push([]); level.push([]);
+    for (let c = 0; c < N; c++) {
+      const finder = (r < 3 || r >= N - 3) && (c < 3 || c >= N - 3);
+      const pilot = !finder && r % 4 === 2 && c % 4 === 2;
+      role[r].push(finder ? 2 : pilot ? 1 : 0);
+      level[r].push(Math.floor(rand() * 4));
+    }
+  }
+  const FINDERS = [[1.5, 1.5], [1.5, N - 1.5], [N - 1.5, N - 1.5], [N - 1.5, 1.5]];
+
+  const frame = document.getElementById("frame");
+  const overlay = document.getElementById("overlay");
+  const rot = document.getElementById("rot");
+  const out = document.getElementById("rot-out");
+  const blur = document.getElementById("blur");
+  const show = document.getElementById("show");
+  const css = getComputedStyle(document.documentElement);
+  const VIOLET = css.getPropertyValue("--violet").trim();
+  const BURN = [42, 51, 64];
+
+  function setup(cv) {
+    const dpr = window.devicePixelRatio || 1;
+    const size = cv.getBoundingClientRect().width;
+    cv.width = Math.round(size * dpr); cv.height = Math.round(size * dpr);
+    const ctx = cv.getContext("2d");
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    return [ctx, size];
+  }
+
+  function grey(refl) {                          // reflectance -> engraving colour on clear glass
+    const a = 1 - refl;
+    const g = [246, 249, 250];
+    return `rgb(${Math.round(g[0] + (BURN[0] - g[0]) * a / 0.9)},${Math.round(g[1] + (BURN[1] - g[1]) * a / 0.9)},${Math.round(g[2] + (BURN[2] - g[2]) * a / 0.9)})`;
+  }
+
+  function draw(deg) {
+    const [ctx, S] = setup(frame);
+    const [octx] = setup(overlay);
+    const cell = S / 37;                          // frame diagonal fits at every angle
+    const th = deg * Math.PI / 180;
+    ctx.fillStyle = "#f6f9fa"; ctx.fillRect(0, 0, S, S);
+    ctx.save();
+    ctx.translate(S / 2, S / 2); ctx.rotate(th); ctx.translate(-N * cell / 2, -N * cell / 2);
+    for (let r = 0; r < N; r++) for (let c = 0; c < N; c++) {
+      if (role[r][c] === 2 || level[r][c] === 0 && role[r][c] === 0) continue;
+      const lv = role[r][c] === 1 ? (r * 7 + c * 3) % 4 : level[r][c];
+      if (lv === 0) continue;
+      ctx.fillStyle = grey(LEVELS[lv]);
+      ctx.fillRect((c + 0.1) * cell, (r + 0.1) * cell, 0.8 * cell, 0.8 * cell);
+    }
+    ctx.fillStyle = grey(0.1); ctx.strokeStyle = grey(0.1);
+    for (const [fr, fc] of FINDERS) {
+      ctx.beginPath(); ctx.arc(fc * cell, fr * cell, 0.45 * cell, 0, 2 * Math.PI); ctx.fill();
+      ctx.beginPath(); ctx.lineWidth = 0.45 * cell; ctx.arc(fc * cell, fr * cell, 1.175 * cell, 0, 2 * Math.PI); ctx.stroke();
+    }
+    ctx.restore();
+
+    octx.clearRect(0, 0, S, S);
+    if (!show.checked) return;
+    const pt = (r, c) => {
+      const u = (c - N / 2) * cell, v = (r - N / 2) * cell;
+      return [S / 2 + u * Math.cos(th) - v * Math.sin(th), S / 2 + u * Math.sin(th) + v * Math.cos(th)];
+    };
+    octx.strokeStyle = VIOLET; octx.lineWidth = 2;
+    octx.setLineDash([5, 4]); octx.beginPath();
+    FINDERS.forEach(([r, c], i) => { const [x, y] = pt(r, c); i ? octx.lineTo(x, y) : octx.moveTo(x, y); });
+    octx.closePath(); octx.stroke(); octx.setLineDash([]);
+    octx.lineWidth = 2.5;
+    for (const [r, c] of FINDERS) { const [x, y] = pt(r, c); octx.beginPath(); octx.arc(x, y, 1.75 * cell, 0, 2 * Math.PI); octx.stroke(); }
+    octx.lineWidth = 1.2;
+    for (let r = 0; r < N; r++) for (let c = 0; c < N; c++) if (role[r][c] === 1) {
+      const [x, y] = pt(r + 0.5, c + 0.5); octx.beginPath(); octx.arc(x, y, 0.55 * cell, 0, 2 * Math.PI); octx.stroke();
+    }
+  }
+
+  function update() { out.textContent = rot.value + "°"; draw(+rot.value); }
+  rot.addEventListener("input", update);
+  show.addEventListener("change", update);
+  blur.addEventListener("change", () => frame.classList.toggle("blurred", blur.checked));
+  window.addEventListener("resize", update);
+
+  // one opening turn, skipped for people who prefer reduced motion
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (reduce) { update(); }
+  else {
+    const t0 = performance.now(), target = 27, dur = 1400;
+    (function step(t) {
+      const k = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - k, 3);
+      const a = Math.round(-60 + (target + 60) * e);
+      rot.value = (a + 360) % 360; out.textContent = rot.value + "°"; draw(a);
+      if (k < 1) requestAnimationFrame(step); else update();
+    })(t0);
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+ "pitch_um": 0.8,
+ "config": "apsk16_genie_64k_j10",
+ "alphabet": "apsk16",
+ "fab_jitter": 0.1,
+ "symbol_error_rate": 0.021777777777777778,
+ "bits_per_symbol_lb": 3.8485001486949155,
+ "max_bits": 4.0,
+ "density_bits_per_um2": 6.013281482335804,
+ "n": 18000
+}

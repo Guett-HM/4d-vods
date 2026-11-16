@@ -1,0 +1,344 @@
+[
+ {
+  "na": 0.25,
+  "pitch_um": 0.972,
+  "pitch_over_lambda_na": 0.6,
+  "trials": 200,
+  "align_success": 0.565,
+  "align_ci95": [
+   0.4957060908195922,
+   0.631843928411026
+  ],
+  "max_cell_error_cells_median": 0.48164199051160916,
+  "ser": 0.2744783464566929,
+  "ber_gray": 0.14824311023622047,
+  "bits_per_cell": 0.8665620867431905,
+  "data_fraction": 0.8819444444444444,
+  "net_density_bits_per_um2": 0.8089252338834502,
+  "camera_pixel_um": 0.405,
+  "pixels_per_cell": 2.4
+ },
+ {
+  "na": 0.25,
+  "pitch_um": 1.215,
+  "pitch_over_lambda_na": 0.75,
+  "trials": 200,
+  "align_success": 0.93,
+  "align_ci95": [
+   0.8859442178331628,
+   0.9578482170770813
+  ],
+  "max_cell_error_cells_median": 0.3055802846650261,
+  "ser": 0.07085629921259842,
+  "ber_gray": 0.04047736220472441,
+  "bits_per_cell": 1.5389590058922473,
+  "data_fraction": 0.8819444444444444,
+  "net_density_bits_per_um2": 0.9194237636365814,
+  "camera_pixel_um": 0.405,
+  "pixels_per_cell": 3.0
+ },
+ {
+  "na": 0.25,
+  "pitch_um": 1.458,
+  "pitch_over_lambda_na": 0.9,
+  "trials": 200,
+  "align_success": 0.96,
+  "align_ci95": [
+   0.9230670617058012,
+   0.9795946128493436
+  ],
+  "max_cell_error_cells_median": 0.22955163122269445,
+  "ser": 0.020374015748031497,
+  "ber_gray": 0.012470472440944881,
+  "bits_per_cell": 1.8268651225164614,
+  "data_fraction": 0.8819444444444444,
+  "net_density_bits_per_um2": 0.7579362269530919,
+  "camera_pixel_um": 0.405,
+  "pixels_per_cell": 3.5999999999999996
+ },
+ {
+  "na": 0.25,
+  "pitch_um": 1.782,
+  "pitch_over_lambda_na": 1.1,
+  "trials": 200,
+  "align_success": 1.0,
+  "align_ci95": [
+   0.9811539940816791,
+   1.0
+  ],
+  "max_cell_error_cells_median": 0.18388179755624814,
+  "ser": 0.00023622047244094488,
+  "ber_gray": 0.00011811023622047244,
+  "bits_per_cell": 1.996715279066938,
+  "data_fraction": 0.8819444444444444,
+  "net_density_bits_per_um2": 0.5545516102257216,
+  "camera_pixel_um": 0.405,
+  "pixels_per_cell": 4.3999999999999995
+ },
+ {
+  "na": 0.25,
+  "pitch_um": 2.268,
+  "pitch_over_lambda_na": 1.4,
+  "trials": 200,
+  "align_success": 1.0,
+  "align_ci95": [
+   0.9811539940816791,
+   1.0
+  ],
+  "max_cell_error_cells_median": 0.14342537978821057,
+  "ser": 2.952755905511811e-05,
+  "ber_gray": 1.4763779527559055e-05,
+  "bits_per_cell": 1.999523256146793,
+  "data_fraction": 0.8819444444444444,
+  "net_density_bits_per_um2": 0.34283218618991046,
+  "camera_pixel_um": 0.405,
+  "pixels_per_cell": 5.599999999999999
+ },
+ {
+  "na": 0.25,
+  "pitch_um": 2.916,
+  "pitch_over_lambda_na": 1.8,
+  "trials": 200,
+  "align_success": 1.0,
+  "align_ci95": [
+   0.9811539940816791,
+   1.0
+  ],
+  "max_cell_error_cells_median": 0.1115747107079744,
+  "ser": 3.937007874015748e-05,
+  "ber_gray": 1.968503937007874e-05,
+  "bits_per_cell": 1.9993208403289562,
+  "data_fraction": 0.8819444444444444,
+  "net_density_bits_per_um2": 0.20737131541767115,
+  "camera_pixel_um": 0.405,
+  "pixels_per_cell": 7.199999999999999
+ },
+ {
+  "na": 0.45,
+  "pitch_um": 0.54,
+  "pitch_over_lambda_na": 0.6,
+  "trials": 200,
+  "align_success": 0.5,
+  "align_ci95": [
+   0.43135962209034523,
+   0.5686403779096547
+  ],
+  "max_cell_error_cells_median": 0.4991334566776773,
+  "ser": 0.30070866141732283,
+  "ber_gray": 0.16624507874015748,
+  "bits_per_cell": 0.771946483397774,
+  "data_fraction": 0.8819444444444444,
+  "net_density_bits_per_um2": 2.3347527861491506,
+  "camera_pixel_um": 0.225,
+  "pixels_per_cell": 2.4
+ },
+ {
+  "na": 0.45,
+  "pitch_um": 0.675,
+  "pitch_over_lambda_na": 0.75,
+  "trials": 200,
+  "align_success": 0.92,
+  "align_ci95": [
+   0.8740095102048769,
+   0.9501598448237337
+  ],
+  "max_cell_error_cells_median": 0.29727603204057496,
+  "ser": 0.0705511811023622,
+  "ber_gray": 0.03998523622047244,
+  "bits_per_cell": 1.5435776052797188,
+  "data_fraction": 0.8819444444444444,
+  "net_density_bits_per_um2": 2.98787312712276,
+  "camera_pixel_um": 0.225,
+  "pixels_per_cell": 3.0
+ },
+ {
+  "na": 0.45,
+  "pitch_um": 0.81,
+  "pitch_over_lambda_na": 0.9,
+  "trials": 200,
+  "align_success": 0.995,
+  "align_ci95": [
+   0.9722256001302286,
+   0.999116854010634
+  ],
+  "max_cell_error_cells_median": 0.22764617262973763,
+  "ser": 0.0029724409448818895,
+  "ber_gray": 0.001515748031496063,
+  "bits_per_cell": 1.9691320550021483,
+  "data_fraction": 0.8819444444444444,
+  "net_density_bits_per_um2": 2.646951800467332,
+  "camera_pixel_um": 0.225,
+  "pixels_per_cell": 3.6
+ },
+ {
+  "na": 0.45,
+  "pitch_um": 0.99,
+  "pitch_over_lambda_na": 1.1,
+  "trials": 200,
+  "align_success": 0.995,
+  "align_ci95": [
+   0.9722256001302286,
+   0.999116854010634
+  ],
+  "max_cell_error_cells_median": 0.18247190348050069,
+  "ser": 0.0024704724409448818,
+  "ber_gray": 0.0014419291338582678,
+  "bits_per_cell": 1.9717385457271275,
+  "data_fraction": 0.8819444444444444,
+  "net_density_bits_per_um2": 1.7742718664432284,
+  "camera_pixel_um": 0.225,
+  "pixels_per_cell": 4.3999999999999995
+ },
+ {
+  "na": 0.45,
+  "pitch_um": 1.26,
+  "pitch_over_lambda_na": 1.4,
+  "trials": 200,
+  "align_success": 1.0,
+  "align_ci95": [
+   0.9811539940816791,
+   1.0
+  ],
+  "max_cell_error_cells_median": 0.14365717707707548,
+  "ser": 3.937007874015748e-05,
+  "ber_gray": 1.968503937007874e-05,
+  "bits_per_cell": 1.9993639555297378,
+  "data_fraction": 0.8819444444444444,
+  "net_density_bits_per_um2": 1.1106877884869748,
+  "camera_pixel_um": 0.225,
+  "pixels_per_cell": 5.6
+ },
+ {
+  "na": 0.45,
+  "pitch_um": 1.62,
+  "pitch_over_lambda_na": 1.8,
+  "trials": 200,
+  "align_success": 1.0,
+  "align_ci95": [
+   0.9811539940816791,
+   1.0
+  ],
+  "max_cell_error_cells_median": 0.11237427165629893,
+  "ser": 1.968503937007874e-05,
+  "ber_gray": 9.84251968503937e-06,
+  "bits_per_cell": 1.9996719169744295,
+  "data_fraction": 0.8819444444444444,
+  "net_density_bits_per_um2": 0.6720010432430918,
+  "camera_pixel_um": 0.225,
+  "pixels_per_cell": 7.2
+ },
+ {
+  "na": 0.65,
+  "pitch_um": 0.374,
+  "pitch_over_lambda_na": 0.6,
+  "trials": 200,
+  "align_success": 0.57,
+  "align_ci95": [
+   0.500703604055383,
+   0.636657955116052
+  ],
+  "max_cell_error_cells_median": 0.4773161465148834,
+  "ser": 0.29512795275590553,
+  "ber_gray": 0.16404527559055118,
+  "bits_per_cell": 0.7764627225331704,
+  "data_fraction": 0.8819444444444444,
+  "net_density_bits_per_um2": 4.895743261576952,
+  "camera_pixel_um": 0.15576923076923077,
+  "pixels_per_cell": 2.400987654320988
+ },
+ {
+  "na": 0.65,
+  "pitch_um": 0.467,
+  "pitch_over_lambda_na": 0.75,
+  "trials": 200,
+  "align_success": 0.905,
+  "align_ci95": [
+   0.8563973488560237,
+   0.9383373863501365
+  ],
+  "max_cell_error_cells_median": 0.3023393667827963,
+  "ser": 0.08172244094488189,
+  "ber_gray": 0.047017716535433074,
+  "bits_per_cell": 1.4842596485923905,
+  "data_fraction": 0.8819444444444444,
+  "net_density_bits_per_um2": 6.002295169353438,
+  "camera_pixel_um": 0.15576923076923077,
+  "pixels_per_cell": 2.9980246913580246
+ },
+ {
+  "na": 0.65,
+  "pitch_um": 0.561,
+  "pitch_over_lambda_na": 0.9,
+  "trials": 200,
+  "align_success": 0.985,
+  "align_ci95": [
+   0.9568335194437211,
+   0.9948858548155076
+  ],
+  "max_cell_error_cells_median": 0.23048488566050274,
+  "ser": 0.012470472440944881,
+  "ber_gray": 0.007864173228346457,
+  "bits_per_cell": 1.8841114275658244,
+  "data_fraction": 0.8819444444444444,
+  "net_density_bits_per_um2": 5.2798561464153,
+  "camera_pixel_um": 0.15576923076923077,
+  "pixels_per_cell": 3.601481481481482
+ },
+ {
+  "na": 0.65,
+  "pitch_um": 0.685,
+  "pitch_over_lambda_na": 1.1,
+  "trials": 200,
+  "align_success": 1.0,
+  "align_ci95": [
+   0.9811539940816791,
+   1.0
+  ],
+  "max_cell_error_cells_median": 0.18476510404269975,
+  "ser": 0.00023622047244094488,
+  "ber_gray": 0.00011811023622047244,
+  "bits_per_cell": 1.9967318023107699,
+  "data_fraction": 0.8819444444444444,
+  "net_density_bits_per_um2": 3.7530108585295454,
+  "camera_pixel_um": 0.15576923076923077,
+  "pixels_per_cell": 4.397530864197531
+ },
+ {
+  "na": 0.65,
+  "pitch_um": 0.872,
+  "pitch_over_lambda_na": 1.4,
+  "trials": 200,
+  "align_success": 1.0,
+  "align_ci95": [
+   0.9811539940816791,
+   1.0
+  ],
+  "max_cell_error_cells_median": 0.14245533016807477,
+  "ser": 2.952755905511811e-05,
+  "ber_gray": 1.4763779527559055e-05,
+  "bits_per_cell": 1.999520440385723,
+  "data_fraction": 0.8819444444444444,
+  "net_density_bits_per_um2": 2.3191781309855246,
+  "camera_pixel_um": 0.15576923076923077,
+  "pixels_per_cell": 5.598024691358025
+ },
+ {
+  "na": 0.65,
+  "pitch_um": 1.122,
+  "pitch_over_lambda_na": 1.8,
+  "trials": 200,
+  "align_success": 1.0,
+  "align_ci95": [
+   0.9811539940816791,
+   1.0
+  ],
+  "max_cell_error_cells_median": 0.11065939044981755,
+  "ser": 0.0,
+  "ber_gray": 0.0,
+  "bits_per_cell": 1.9999597303521774,
+  "data_fraction": 0.8819444444444444,
+  "net_density_bits_per_um2": 1.4011246256976113,
+  "camera_pixel_um": 0.15576923076923077,
+  "pixels_per_cell": 7.202962962962964
+ }
+]

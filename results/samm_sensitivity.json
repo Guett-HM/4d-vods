@@ -1,0 +1,182 @@
+[
+ {
+  "case": "baseline",
+  "na": 0.45,
+  "pitch_over_lambda_na": 0.9,
+  "pitch_um": 0.81,
+  "noise": 0.02,
+  "jitter": 0.03,
+  "align_success": 0.9833333333333333,
+  "align_ci95": [
+   0.9412628731870861,
+   0.9954175314588486
+  ],
+  "ser": 0.011778215223097114,
+  "bits_per_cell": 1.8901179809518327
+ },
+ {
+  "case": "baseline",
+  "na": 0.45,
+  "pitch_over_lambda_na": 1.1,
+  "pitch_um": 0.99,
+  "noise": 0.02,
+  "jitter": 0.03,
+  "align_success": 1.0,
+  "align_ci95": [
+   0.9689797289440706,
+   1.0
+  ],
+  "ser": 0.00013123359580052493,
+  "bits_per_cell": 1.9980267935176872
+ },
+ {
+  "case": "baseline",
+  "na": 0.45,
+  "pitch_over_lambda_na": 1.4,
+  "pitch_um": 1.26,
+  "noise": 0.02,
+  "jitter": 0.03,
+  "align_success": 1.0,
+  "align_ci95": [
+   0.9689797289440706,
+   1.0
+  ],
+  "ser": 1.6404199475065617e-05,
+  "bits_per_cell": 1.9997392903636695
+ },
+ {
+  "case": "noise x2",
+  "na": 0.45,
+  "pitch_over_lambda_na": 0.9,
+  "pitch_um": 0.81,
+  "noise": 0.04,
+  "jitter": 0.03,
+  "align_success": 0.9666666666666667,
+  "align_ci95": [
+   0.9174184205147198,
+   0.9869626598330794
+  ],
+  "ser": 0.04041994750656168,
+  "bits_per_cell": 1.6957870570884404
+ },
+ {
+  "case": "noise x2",
+  "na": 0.45,
+  "pitch_over_lambda_na": 1.1,
+  "pitch_um": 0.99,
+  "noise": 0.04,
+  "jitter": 0.03,
+  "align_success": 0.9833333333333333,
+  "align_ci95": [
+   0.9412628731870861,
+   0.9954175314588486
+  ],
+  "ser": 0.01684711286089239,
+  "bits_per_cell": 1.8515552906600465
+ },
+ {
+  "case": "noise x2",
+  "na": 0.45,
+  "pitch_over_lambda_na": 1.4,
+  "pitch_um": 1.26,
+  "noise": 0.04,
+  "jitter": 0.03,
+  "align_success": 1.0,
+  "align_ci95": [
+   0.9689797289440706,
+   1.0
+  ],
+  "ser": 0.001541994750656168,
+  "bits_per_cell": 1.9824702610837057
+ },
+ {
+  "case": "writing variability x2",
+  "na": 0.45,
+  "pitch_over_lambda_na": 0.9,
+  "pitch_um": 0.81,
+  "noise": 0.02,
+  "jitter": 0.06,
+  "align_success": 0.9833333333333333,
+  "align_ci95": [
+   0.9412628731870861,
+   0.9954175314588486
+  ],
+  "ser": 0.04038713910761155,
+  "bits_per_cell": 1.7165483164572377
+ },
+ {
+  "case": "writing variability x2",
+  "na": 0.45,
+  "pitch_over_lambda_na": 1.1,
+  "pitch_um": 0.99,
+  "noise": 0.02,
+  "jitter": 0.06,
+  "align_success": 1.0,
+  "align_ci95": [
+   0.9689797289440706,
+   1.0
+  ],
+  "ser": 0.02066929133858268,
+  "bits_per_cell": 1.842936729864522
+ },
+ {
+  "case": "writing variability x2",
+  "na": 0.45,
+  "pitch_over_lambda_na": 1.4,
+  "pitch_um": 1.26,
+  "noise": 0.02,
+  "jitter": 0.06,
+  "align_success": 1.0,
+  "align_ci95": [
+   0.9689797289440706,
+   1.0
+  ],
+  "ser": 0.017568897637795275,
+  "bits_per_cell": 1.8623123897073612
+ },
+ {
+  "case": "both x2",
+  "na": 0.45,
+  "pitch_over_lambda_na": 0.9,
+  "pitch_um": 0.81,
+  "noise": 0.04,
+  "jitter": 0.06,
+  "align_success": 0.9666666666666667,
+  "align_ci95": [
+   0.9174184205147198,
+   0.9869626598330794
+  ],
+  "ser": 0.07755905511811023,
+  "bits_per_cell": 1.5207421701463812
+ },
+ {
+  "case": "both x2",
+  "na": 0.45,
+  "pitch_over_lambda_na": 1.1,
+  "pitch_um": 0.99,
+  "noise": 0.04,
+  "jitter": 0.06,
+  "align_success": 1.0,
+  "align_ci95": [
+   0.9689797289440706,
+   1.0
+  ],
+  "ser": 0.03840223097112861,
+  "bits_per_cell": 1.742980672503747
+ },
+ {
+  "case": "both x2",
+  "na": 0.45,
+  "pitch_over_lambda_na": 1.4,
+  "pitch_um": 1.26,
+  "noise": 0.04,
+  "jitter": 0.06,
+  "align_success": 1.0,
+  "align_ci95": [
+   0.9689797289440706,
+   1.0
+  ],
+  "ser": 0.030544619422572177,
+  "bits_per_cell": 1.7854946722332237
+ }
+]

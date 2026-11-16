@@ -1,0 +1,42 @@
+[
+ {
+  "dataset": "4 KB zero page",
+  "bytes": 4096,
+  "symbols_raw": 4096,
+  "symbols_physical_rle": 13,
+  "symbols_zlib9": 26,
+  "symbols_lzma": 33
+ },
+ {
+  "dataset": "Padded database",
+  "bytes": 65536,
+  "symbols_raw": 65536,
+  "symbols_physical_rle": 38699,
+  "symbols_zlib9": 11186,
+  "symbols_lzma": 6936
+ },
+ {
+  "dataset": "Text / source code",
+  "bytes": 49069,
+  "symbols_raw": 49069,
+  "symbols_physical_rle": 44180,
+  "symbols_zlib9": 11524,
+  "symbols_lzma": 10687
+ },
+ {
+  "dataset": "Neural-net weights (float32)",
+  "bytes": 65536,
+  "symbols_raw": 65536,
+  "symbols_physical_rle": 65536,
+  "symbols_zlib9": 60841,
+  "symbols_lzma": 60770
+ },
+ {
+  "dataset": "Compressed / encrypted data",
+  "bytes": 65536,
+  "symbols_raw": 65536,
+  "symbols_physical_rle": 65536,
+  "symbols_zlib9": 65562,
+  "symbols_lzma": 65543
+ }
+]

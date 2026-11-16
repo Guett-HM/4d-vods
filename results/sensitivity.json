@@ -1,0 +1,290 @@
+[
+ {
+  "pitch_um": 0.15,
+  "alphabet": "wedge256",
+  "fab_jitter": 0.05,
+  "bits_per_symbol": 0.008373977909092346,
+  "density_bits_per_um2": 0.37217679595965986,
+  "symbol_error_rate": 0.9953888888888889,
+  "n": 18000
+ },
+ {
+  "pitch_um": 0.15,
+  "alphabet": "wedge256",
+  "fab_jitter": 0.2,
+  "bits_per_symbol": 0.009338210961137194,
+  "density_bits_per_um2": 0.4150315982727642,
+  "symbol_error_rate": 0.9952777777777778,
+  "n": 18000
+ },
+ {
+  "pitch_um": 0.15,
+  "alphabet": "apsk16",
+  "fab_jitter": 0.05,
+  "bits_per_symbol": 0.09998609846759092,
+  "density_bits_per_um2": 4.443826598559596,
+  "symbol_error_rate": 0.927,
+  "n": 18000
+ },
+ {
+  "pitch_um": 0.15,
+  "alphabet": "apsk16",
+  "fab_jitter": 0.2,
+  "bits_per_symbol": 0.10784256030118178,
+  "density_bits_per_um2": 4.793002680052524,
+  "symbol_error_rate": 0.9255,
+  "n": 18000
+ },
+ {
+  "pitch_um": 0.2,
+  "alphabet": "wedge256",
+  "fab_jitter": 0.05,
+  "bits_per_symbol": 0.03213292978136776,
+  "density_bits_per_um2": 0.8033232445341938,
+  "symbol_error_rate": 0.9936111111111111,
+  "n": 18000
+ },
+ {
+  "pitch_um": 0.2,
+  "alphabet": "wedge256",
+  "fab_jitter": 0.2,
+  "bits_per_symbol": 0.037606530096797874,
+  "density_bits_per_um2": 0.9401632524199467,
+  "symbol_error_rate": 0.9936666666666667,
+  "n": 18000
+ },
+ {
+  "pitch_um": 0.2,
+  "alphabet": "apsk16",
+  "fab_jitter": 0.05,
+  "bits_per_symbol": 0.5979699296760176,
+  "density_bits_per_um2": 14.949248241900436,
+  "symbol_error_rate": 0.906,
+  "n": 18000
+ },
+ {
+  "pitch_um": 0.2,
+  "alphabet": "apsk16",
+  "fab_jitter": 0.2,
+  "bits_per_symbol": 0.542316137059388,
+  "density_bits_per_um2": 13.557903426484696,
+  "symbol_error_rate": 0.9012222222222223,
+  "n": 18000
+ },
+ {
+  "pitch_um": 0.25,
+  "alphabet": "wedge256",
+  "fab_jitter": 0.05,
+  "bits_per_symbol": 0.3743608869582793,
+  "density_bits_per_um2": 5.989774191332469,
+  "symbol_error_rate": 0.9902222222222222,
+  "n": 18000
+ },
+ {
+  "pitch_um": 0.25,
+  "alphabet": "wedge256",
+  "fab_jitter": 0.2,
+  "bits_per_symbol": 0.36644125336048994,
+  "density_bits_per_um2": 5.863060053767839,
+  "symbol_error_rate": 0.9884444444444445,
+  "n": 18000
+ },
+ {
+  "pitch_um": 0.25,
+  "alphabet": "apsk16",
+  "fab_jitter": 0.05,
+  "bits_per_symbol": 2.238633996965316,
+  "density_bits_per_um2": 35.81814395144506,
+  "symbol_error_rate": 0.53,
+  "n": 18000
+ },
+ {
+  "pitch_um": 0.25,
+  "alphabet": "apsk16",
+  "fab_jitter": 0.2,
+  "bits_per_symbol": 1.8820144822064602,
+  "density_bits_per_um2": 30.112231715303363,
+  "symbol_error_rate": 0.5662222222222222,
+  "n": 18000
+ },
+ {
+  "pitch_um": 0.3,
+  "alphabet": "wedge256",
+  "fab_jitter": 0.05,
+  "bits_per_symbol": 1.5390775982829048,
+  "density_bits_per_um2": 17.100862203143386,
+  "symbol_error_rate": 0.9748333333333333,
+  "n": 18000
+ },
+ {
+  "pitch_um": 0.3,
+  "alphabet": "wedge256",
+  "fab_jitter": 0.2,
+  "bits_per_symbol": 1.1027637884537436,
+  "density_bits_per_um2": 12.252930982819374,
+  "symbol_error_rate": 0.9809444444444444,
+  "n": 18000
+ },
+ {
+  "pitch_um": 0.3,
+  "alphabet": "apsk16",
+  "fab_jitter": 0.05,
+  "bits_per_symbol": 3.9986849116791148,
+  "density_bits_per_um2": 44.429832351990164,
+  "symbol_error_rate": 5.555555555555556e-05,
+  "n": 18000
+ },
+ {
+  "pitch_um": 0.3,
+  "alphabet": "apsk16",
+  "fab_jitter": 0.2,
+  "bits_per_symbol": 2.971734866987735,
+  "density_bits_per_um2": 33.019276299863726,
+  "symbol_error_rate": 0.21255555555555555,
+  "n": 18000
+ },
+ {
+  "pitch_um": 0.4,
+  "alphabet": "wedge256",
+  "fab_jitter": 0.05,
+  "bits_per_symbol": 3.136774296595398,
+  "density_bits_per_um2": 19.604839353721232,
+  "symbol_error_rate": 0.7073888888888888,
+  "n": 18000
+ },
+ {
+  "pitch_um": 0.4,
+  "alphabet": "wedge256",
+  "fab_jitter": 0.2,
+  "bits_per_symbol": 2.013934186885237,
+  "density_bits_per_um2": 12.58708866803273,
+  "symbol_error_rate": 0.8392222222222222,
+  "n": 18000
+ },
+ {
+  "pitch_um": 0.4,
+  "alphabet": "apsk16",
+  "fab_jitter": 0.05,
+  "bits_per_symbol": 3.998658912320776,
+  "density_bits_per_um2": 24.991618202004847,
+  "symbol_error_rate": 5.555555555555556e-05,
+  "n": 18000
+ },
+ {
+  "pitch_um": 0.4,
+  "alphabet": "apsk16",
+  "fab_jitter": 0.2,
+  "bits_per_symbol": 3.0074477236613895,
+  "density_bits_per_um2": 18.79654827288368,
+  "symbol_error_rate": 0.2041111111111111,
+  "n": 18000
+ },
+ {
+  "pitch_um": 0.5,
+  "alphabet": "wedge256",
+  "fab_jitter": 0.05,
+  "bits_per_symbol": 7.291160271084862,
+  "density_bits_per_um2": 29.164641084339447,
+  "symbol_error_rate": 0.0585,
+  "n": 18000
+ },
+ {
+  "pitch_um": 0.5,
+  "alphabet": "wedge256",
+  "fab_jitter": 0.2,
+  "bits_per_symbol": 4.9004834501400385,
+  "density_bits_per_um2": 19.601933800560154,
+  "symbol_error_rate": 0.37905555555555553,
+  "n": 18000
+ },
+ {
+  "pitch_um": 0.5,
+  "alphabet": "apsk16",
+  "fab_jitter": 0.05,
+  "bits_per_symbol": 3.9984021140962307,
+  "density_bits_per_um2": 15.993608456384923,
+  "symbol_error_rate": 0.00011111111111111112,
+  "n": 18000
+ },
+ {
+  "pitch_um": 0.5,
+  "alphabet": "apsk16",
+  "fab_jitter": 0.2,
+  "bits_per_symbol": 3.0244570933899917,
+  "density_bits_per_um2": 12.097828373559967,
+  "symbol_error_rate": 0.19794444444444445,
+  "n": 18000
+ },
+ {
+  "pitch_um": 0.6,
+  "alphabet": "wedge256",
+  "fab_jitter": 0.05,
+  "bits_per_symbol": 7.993015344108122,
+  "density_bits_per_um2": 22.20282040030034,
+  "symbol_error_rate": 0.00038888888888888887,
+  "n": 18000
+ },
+ {
+  "pitch_um": 0.6,
+  "alphabet": "wedge256",
+  "fab_jitter": 0.2,
+  "bits_per_symbol": 7.016774211225103,
+  "density_bits_per_um2": 19.491039475625286,
+  "symbol_error_rate": 0.1778888888888889,
+  "n": 18000
+ },
+ {
+  "pitch_um": 0.6,
+  "alphabet": "apsk16",
+  "fab_jitter": 0.05,
+  "bits_per_symbol": 3.999447272157246,
+  "density_bits_per_um2": 11.109575755992351,
+  "symbol_error_rate": 0.0,
+  "n": 18000
+ },
+ {
+  "pitch_um": 0.6,
+  "alphabet": "apsk16",
+  "fab_jitter": 0.2,
+  "bits_per_symbol": 3.0212360433991945,
+  "density_bits_per_um2": 8.392322342775541,
+  "symbol_error_rate": 0.20072222222222222,
+  "n": 18000
+ },
+ {
+  "pitch_um": 0.8,
+  "alphabet": "wedge256",
+  "fab_jitter": 0.05,
+  "bits_per_symbol": 7.998681106242273,
+  "density_bits_per_um2": 12.497939228503549,
+  "symbol_error_rate": 5.555555555555556e-05,
+  "n": 18000
+ },
+ {
+  "pitch_um": 0.8,
+  "alphabet": "wedge256",
+  "fab_jitter": 0.2,
+  "bits_per_symbol": 7.249276302007897,
+  "density_bits_per_um2": 11.326994221887336,
+  "symbol_error_rate": 0.1411111111111111,
+  "n": 18000
+ },
+ {
+  "pitch_um": 0.8,
+  "alphabet": "apsk16",
+  "fab_jitter": 0.05,
+  "bits_per_symbol": 3.9990346688468557,
+  "density_bits_per_um2": 6.248491670073211,
+  "symbol_error_rate": 5.555555555555556e-05,
+  "n": 18000
+ },
+ {
+  "pitch_um": 0.8,
+  "alphabet": "apsk16",
+  "fab_jitter": 0.2,
+  "bits_per_symbol": 3.017104659183909,
+  "density_bits_per_um2": 4.714226029974857,
+  "symbol_error_rate": 0.20122222222222222,
+  "n": 18000
+ }
+]
