@@ -1,5 +1,4 @@
 """Fast sanity tests for the simulator (run with: pytest -q tests)."""
-import math
 import os
 import sys
 
@@ -7,8 +6,8 @@ import numpy as np
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "sim"))
 
-import vods_sim as V  # noqa: E402
 import samm_sim as S  # noqa: E402
+import vods_sim as V  # noqa: E402
 
 
 def test_split_byte_covers_all_states():

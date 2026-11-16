@@ -6,23 +6,15 @@
 Usage: python3 make_illustrations.py
 """
 import math
-import os
 
 import numpy as np
-import matplotlib
-matplotlib.use("Agg")
-import matplotlib.pyplot as plt
 from matplotlib.patches import Rectangle
+from plotstyle import EDGE, ERR, INK, INK2, S1, plt, save
 
-import vods_sim as V
 import samm_sim as S
+import vods_sim as V
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-FIG = os.path.join(ROOT, "figures")
-os.makedirs(FIG, exist_ok=True)
-INK, INK2, SURF = "#0b0b0b", "#52514e", "#fcfcfb"
-plt.rcParams.update({"font.family": "DejaVu Sans", "font.size": 10, "figure.facecolor": SURF,
-                     "savefig.facecolor": SURF, "text.color": INK})
+plt.rcParams.update({"font.size": 10, "axes.grid": False})
 
 
 def fig_symbols():
@@ -57,7 +49,7 @@ def fig_symbols():
                 ax.imshow(img, cmap="gray", vmin=0, vmax=1.6, interpolation="nearest")
             ax.set_xticks([]); ax.set_yticks([])
             for sp in ax.spines.values():
-                sp.set_color("#c3c2b7")
+                sp.set_color(EDGE)
             if ri == 0:
                 ax.set_title(lab, fontsize=9.5, color=INK)
             if ci == 0:
@@ -67,8 +59,7 @@ def fig_symbols():
     fig.text(0.02, 0.01, "Simulated: 405 nm, NA 0.90, coherent interferometric readout; window = 2 x 2 cells. "
              "Row 1 colour = engraving phase (depth); rows 2-3 show image amplitude only.", fontsize=8.5, color=INK2)
     fig.tight_layout(rect=(0, 0.03, 1, 0.95))
-    fig.savefig(os.path.join(FIG, "fig0_symbols.png"), dpi=180)
-    plt.close(fig)
+    save(fig, "fig0_symbols", dpi=180)
 
 
 def fig_samm():
@@ -96,14 +87,14 @@ def fig_samm():
     axes[1].imshow(img, cmap="gray", interpolation="nearest")
     if cands:
         P = cands[0]
-        axes[1].plot(P[:, 1], P[:, 0], "o", ms=9, mfc="none", mec="#2a78d6", mew=2)
+        axes[1].plot(P[:, 1], P[:, 0], "o", ms=9, mfc="none", mec=S1, mew=2)
     axes[1].set_title("2. Camera image (NA 0.45, tilted light);\n    finders found (blue)", fontsize=10)
     grid = np.where(S.ROLE == 2, np.nan, S.LEVELS[est])
     axes[2].imshow(grid, cmap="gray", vmin=0, vmax=1, interpolation="nearest")
     for (i, j) in np.argwhere(S.ROLE == 1):
-        axes[2].add_patch(Rectangle((j - 0.5, i - 0.5), 1, 1, fill=False, ec="#2a78d6", lw=1))
+        axes[2].add_patch(Rectangle((j - 0.5, i - 0.5), 1, 1, fill=False, ec=S1, lw=1))
     for (i, j) in np.argwhere(~ok):
-        axes[2].add_patch(Rectangle((j - 0.5, i - 0.5), 1, 1, fill=False, ec="#e34948", lw=2))
+        axes[2].add_patch(Rectangle((j - 0.5, i - 0.5), 1, 1, fill=False, ec=ERR, lw=2))
     n_err = int(np.sum(~ok))
     axes[2].set_title(f"3. Decoded and straightened: {data.sum() - n_err} of {data.sum()}\n"
                       f"    data cells correct (pilots outlined in blue)", fontsize=10)
@@ -112,8 +103,7 @@ def fig_samm():
     fig.suptitle(f"SAMM frame, 24 x 24 cells, pitch {p:.2f} µm, read with a budget 20x objective",
                  x=0.02, ha="left", fontsize=12)
     fig.tight_layout(rect=(0, 0, 1, 0.93))
-    fig.savefig(os.path.join(FIG, "fig6_samm_pipeline.png"), dpi=180)
-    plt.close(fig)
+    save(fig, "fig6_samm_pipeline", dpi=180)
     return n_err
 
 

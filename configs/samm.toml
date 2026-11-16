@@ -1,0 +1,4 @@
+# SAMM pitch sweep exactly as published in v1.0 (results/samm.json).
+# python -m vods run samm --config configs/samm.toml                (~30 min)
+trials = 200
+na = [0.25, 0.45, 0.65]

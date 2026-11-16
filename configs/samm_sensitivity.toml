@@ -1,0 +1,3 @@
+# SAMM sensitivity to camera noise and writing variability (results/samm_sensitivity.json).
+# python -m vods run samm --config configs/samm_sensitivity.toml
+sensitivity = true

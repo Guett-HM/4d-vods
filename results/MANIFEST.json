@@ -1,0 +1,1506 @@
+{
+ "description": "Provenance of every result file: hash, command, parameters, commit and software versions. Checked by tests/test_provenance.py.",
+ "files": {
+  "lattice_p150_apsk16_64k.json": {
+   "sha256": "bf10a906451a40b540621bfa6083b30d06475cf28067f6a12007bf1443d54863",
+   "command": "python3 sim/vods_sim.py extra",
+   "parameters": {
+    "experiment": "extra",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p150_apsk16_64k_j10.json": {
+   "sha256": "e1989a0125f1255c6a1af7a4900b67869b6b17f4242ba56dcf82eb5faa7a310f",
+   "command": "python3 sim/vods_sim.py extra",
+   "parameters": {
+    "experiment": "extra",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p150_apsk16_genie_64k_j10.json": {
+   "sha256": "b371b69b290e8d003d0ba1eb1fb0af326c898fd09637e186309f86303037e7ea",
+   "command": "python3 sim/vods_sim.py extra",
+   "parameters": {
+    "experiment": "extra",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p150_ideal_640k.json": {
+   "sha256": "b10916a9571829c4444a2455436ada20a352a381f76834a493a0ff594db97eaa",
+   "command": "python3 sim/vods_sim.py lattice",
+   "parameters": {
+    "experiment": "lattice",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p150_ideal_64k.json": {
+   "sha256": "31a33a622886d36a84a94b4fe2fbde042c89185ecaca717f861564b188f81aca",
+   "command": "python3 sim/vods_sim.py lattice",
+   "parameters": {
+    "experiment": "lattice",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p150_ideal_6k4.json": {
+   "sha256": "f610b4ce3cbd93299bf270b15ac094d1cd0890fcd0c3a9c6c920855b893795c2",
+   "command": "python3 sim/vods_sim.py lattice",
+   "parameters": {
+    "experiment": "lattice",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p150_realistic_64k_j10.json": {
+   "sha256": "24502ba0981779b70d253e35aecfe9ceb14434db6bcfef2163ddfbacedf8485a",
+   "command": "python3 sim/vods_sim.py lattice",
+   "parameters": {
+    "experiment": "lattice",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p150_wedge_genie_64k.json": {
+   "sha256": "8095d6abceac4257a7f708c7ba3d4f76c5e0ca4b5eb93d988e2b966610ef3f97",
+   "command": "python3 sim/vods_sim.py extra",
+   "parameters": {
+    "experiment": "extra",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p150_wedge_genie_64k_j10.json": {
+   "sha256": "e0b4c41329cc83301138afb465d315c78e52ac5facd80f47401e826c8d123a66",
+   "command": "python3 sim/vods_sim.py extra",
+   "parameters": {
+    "experiment": "extra",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p200_apsk16_64k.json": {
+   "sha256": "4a61e08492b849bccb4037c04fe11f4993cf2c112183411b2f36f6f9de70b86f",
+   "command": "python3 sim/vods_sim.py extra",
+   "parameters": {
+    "experiment": "extra",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p200_apsk16_64k_j10.json": {
+   "sha256": "2cbbfdf453c76524cffbadf67f6d96abbd6c11460709bb156e49c234a52ed9bc",
+   "command": "python3 sim/vods_sim.py extra",
+   "parameters": {
+    "experiment": "extra",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p200_apsk16_genie_64k_j10.json": {
+   "sha256": "5bf3f7728fedaf81edcb1bc163fef15d7ff6f195ea9b95a7468dcf4df48c998b",
+   "command": "python3 sim/vods_sim.py extra",
+   "parameters": {
+    "experiment": "extra",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p200_ideal_640k.json": {
+   "sha256": "acfcf5c5ea161feaf444afe1bf8eba6bb7a7956ed80155ed1ed3d5b17e8a6fe5",
+   "command": "python3 sim/vods_sim.py lattice",
+   "parameters": {
+    "experiment": "lattice",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p200_ideal_64k.json": {
+   "sha256": "a59a3e6d5d492d2fd0321570b93a8bf546a626008440f8ce94870abe67c9fa90",
+   "command": "python3 sim/vods_sim.py lattice",
+   "parameters": {
+    "experiment": "lattice",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p200_ideal_6k4.json": {
+   "sha256": "ae55f9400134e00786d7c33f965b298e6cfdc050748702db2e974d46af3d38b7",
+   "command": "python3 sim/vods_sim.py lattice",
+   "parameters": {
+    "experiment": "lattice",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p200_realistic_64k_j10.json": {
+   "sha256": "ad92d84cbd037bf116fa54a22f0b6edd280c471fe1ce4ba519f300e7f1b458fa",
+   "command": "python3 sim/vods_sim.py lattice",
+   "parameters": {
+    "experiment": "lattice",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p200_wedge_genie_64k.json": {
+   "sha256": "1cfded78f8f6ddc22b3ade8bbe2fc8aad3c064bd08a7b55cf1775b3136d6da94",
+   "command": "python3 sim/vods_sim.py extra",
+   "parameters": {
+    "experiment": "extra",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p200_wedge_genie_64k_j10.json": {
+   "sha256": "9d60c3ef6a6643f24669d286e0ca0fd013ec125d816ff811836fd531d14dc62f",
+   "command": "python3 sim/vods_sim.py extra",
+   "parameters": {
+    "experiment": "extra",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p250_apsk16_64k.json": {
+   "sha256": "e08bd39941df2a7d7708b05ffa7f291d84421e35238a72fb3fdaaf9642f4e1cc",
+   "command": "python3 sim/vods_sim.py extra",
+   "parameters": {
+    "experiment": "extra",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p250_apsk16_64k_j10.json": {
+   "sha256": "166b7c037e40583e4dc0e5c8342d3666b0ee707e772276ffeab8d86b88c2f1be",
+   "command": "python3 sim/vods_sim.py extra",
+   "parameters": {
+    "experiment": "extra",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p250_apsk16_genie_64k_j10.json": {
+   "sha256": "ad24caf736966c3fddbb77938cfa257986178178d1a5538a4e3a5684796648a0",
+   "command": "python3 sim/vods_sim.py extra",
+   "parameters": {
+    "experiment": "extra",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p250_ideal_640k.json": {
+   "sha256": "2c342a851b67cf62760fbe9a0c2f12c429dd7532e3906a7b17b9969e53fd9eba",
+   "command": "python3 sim/vods_sim.py lattice",
+   "parameters": {
+    "experiment": "lattice",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p250_ideal_64k.json": {
+   "sha256": "f194a5f25fb022fe49643b928a9fc8edfc70c46cc60a12d4d9e432afffe800a7",
+   "command": "python3 sim/vods_sim.py lattice",
+   "parameters": {
+    "experiment": "lattice",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p250_ideal_6k4.json": {
+   "sha256": "4e0221c140f6efa94d8be87841350eb046e27bdd85e360221a0290f0a8657689",
+   "command": "python3 sim/vods_sim.py lattice",
+   "parameters": {
+    "experiment": "lattice",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p250_realistic_64k_j10.json": {
+   "sha256": "2824b703411f04e5ffcf4aace69df81dcbbaff91861ec278abd8a58cd1373c3c",
+   "command": "python3 sim/vods_sim.py lattice",
+   "parameters": {
+    "experiment": "lattice",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p250_wedge_genie_64k.json": {
+   "sha256": "0989affaeb1c3d18903a3c44782d01680039de6f173cc81d2d67ec1b949784d3",
+   "command": "python3 sim/vods_sim.py extra",
+   "parameters": {
+    "experiment": "extra",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p250_wedge_genie_64k_j10.json": {
+   "sha256": "b4eb052334ed22c7c4291a78c7db9826c2618434d37238758a2626b37f24d938",
+   "command": "python3 sim/vods_sim.py extra",
+   "parameters": {
+    "experiment": "extra",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p300_apsk16_64k.json": {
+   "sha256": "04616f1ff525f80bca473588f09cb8ab99431319abbbc68e27aff3db2e23d103",
+   "command": "python3 sim/vods_sim.py extra",
+   "parameters": {
+    "experiment": "extra",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p300_apsk16_64k_j10.json": {
+   "sha256": "9722703558f62d5114a95bd96bbec8e921922aab95be562dbfc3b2c39deeb163",
+   "command": "python3 sim/vods_sim.py extra",
+   "parameters": {
+    "experiment": "extra",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p300_apsk16_genie_64k_j10.json": {
+   "sha256": "cf6c71784dd2b0bf098d5c7710bdd81007ef34c38d03806b0c1b7d18ca79b3d0",
+   "command": "python3 sim/vods_sim.py extra",
+   "parameters": {
+    "experiment": "extra",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p300_ideal_640k.json": {
+   "sha256": "1c01720a8973894ef38614e07a42a993af3aa9c2c78893aa813d1cf500df8de6",
+   "command": "python3 sim/vods_sim.py lattice",
+   "parameters": {
+    "experiment": "lattice",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p300_ideal_64k.json": {
+   "sha256": "5b8f8bc4a4396d230a0072ce63b4a76dfc705e06841c1c8e623ceb45f398d0f6",
+   "command": "python3 sim/vods_sim.py lattice",
+   "parameters": {
+    "experiment": "lattice",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p300_ideal_6k4.json": {
+   "sha256": "fd6f9cbe99f7630349daca211c91c72df29eaf34b54140f1f2e7473abd1e5596",
+   "command": "python3 sim/vods_sim.py lattice",
+   "parameters": {
+    "experiment": "lattice",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p300_realistic_64k_j10.json": {
+   "sha256": "16597818795bd45f94ce56ffbc9ba38c792e3d52f3232aa5b157ea1c49482b03",
+   "command": "python3 sim/vods_sim.py lattice",
+   "parameters": {
+    "experiment": "lattice",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p300_wedge_genie_64k.json": {
+   "sha256": "09842d9587ba9529ed8e852bb87436ce22214a93472cae19c28561c6eb5235d2",
+   "command": "python3 sim/vods_sim.py extra",
+   "parameters": {
+    "experiment": "extra",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p300_wedge_genie_64k_j10.json": {
+   "sha256": "35cf9629d94aa3db20f966215cae6f742e6aacf734cd02d64c64a00161f6c938",
+   "command": "python3 sim/vods_sim.py extra",
+   "parameters": {
+    "experiment": "extra",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p400_apsk16_64k.json": {
+   "sha256": "84aaa1df1db78b58d3f3c6dd85debba984fa7ad6438ebf8bc8ecb0ccdbc73ad4",
+   "command": "python3 sim/vods_sim.py extra",
+   "parameters": {
+    "experiment": "extra",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p400_apsk16_64k_j10.json": {
+   "sha256": "d5465ffffca3a40b0912a2e6df8ec4313f6c2ba9337a589cc0fe3cce13400c52",
+   "command": "python3 sim/vods_sim.py extra",
+   "parameters": {
+    "experiment": "extra",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p400_apsk16_genie_64k_j10.json": {
+   "sha256": "3d8c1e7a809fd75ea0ca905dce9ac234b0188ae1439d276aadcddb294cdcac99",
+   "command": "python3 sim/vods_sim.py extra",
+   "parameters": {
+    "experiment": "extra",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p400_ideal_640k.json": {
+   "sha256": "442e1daceaceecc8196c621652271aa78b090d4fc752c531df61365102e8d5c6",
+   "command": "python3 sim/vods_sim.py lattice",
+   "parameters": {
+    "experiment": "lattice",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p400_ideal_64k.json": {
+   "sha256": "5479d7cf234592acb57859facbf3f046aded42d9c313f4178f3987fb3080487e",
+   "command": "python3 sim/vods_sim.py lattice",
+   "parameters": {
+    "experiment": "lattice",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p400_ideal_6k4.json": {
+   "sha256": "5dd5be7094b4f345187b155046ffb7c438732bcaa7e72a61f4cbb55b1656b20b",
+   "command": "python3 sim/vods_sim.py lattice",
+   "parameters": {
+    "experiment": "lattice",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p400_realistic_64k_j10.json": {
+   "sha256": "f4fb94e92f4bb28434618d3f84164dd6dc87ca956bf157a03e9a595219a1cfde",
+   "command": "python3 sim/vods_sim.py lattice",
+   "parameters": {
+    "experiment": "lattice",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p400_wedge_genie_64k.json": {
+   "sha256": "48d81f59abf254b4ce5b289e1f245c05968bac50fe056b2bc7a0a140e60d4628",
+   "command": "python3 sim/vods_sim.py extra",
+   "parameters": {
+    "experiment": "extra",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p400_wedge_genie_64k_j10.json": {
+   "sha256": "5db4f7e9f8591cb133e54f90c7866716ecd93158c9ee98052e9b94ea43552b91",
+   "command": "python3 sim/vods_sim.py extra",
+   "parameters": {
+    "experiment": "extra",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p500_apsk16_64k.json": {
+   "sha256": "afc957dc28bbd549f58941fca8faa10bcb623ea8ac6e04f578948f4f1ecb36c2",
+   "command": "python3 sim/vods_sim.py extra",
+   "parameters": {
+    "experiment": "extra",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p500_apsk16_64k_j10.json": {
+   "sha256": "5028f80ac46a806bcf960051a7ca6986133dcb127c767bf1c1ec9a21f893ae01",
+   "command": "python3 sim/vods_sim.py extra",
+   "parameters": {
+    "experiment": "extra",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p500_apsk16_genie_64k_j10.json": {
+   "sha256": "258f0be19aff3130b3e449c52e3fa41ce0c6719b637110c5a08e2f170cd8f05b",
+   "command": "python3 sim/vods_sim.py extra",
+   "parameters": {
+    "experiment": "extra",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p500_ideal_640k.json": {
+   "sha256": "68bb93952799ebf51e89af340743b67c04a126bd0796d2fea847c54017354dd4",
+   "command": "python3 sim/vods_sim.py lattice",
+   "parameters": {
+    "experiment": "lattice",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p500_ideal_64k.json": {
+   "sha256": "2ea7d36f57206533c3aafa26f63d70b94a6e4ad3409a59ec13dbea6ca4b55907",
+   "command": "python3 sim/vods_sim.py lattice",
+   "parameters": {
+    "experiment": "lattice",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p500_ideal_6k4.json": {
+   "sha256": "5a64a7742222aceeb56f24f5cdb1b2e8ed44ec85f9eb3c73704a061d9691c641",
+   "command": "python3 sim/vods_sim.py lattice",
+   "parameters": {
+    "experiment": "lattice",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p500_realistic_64k_j10.json": {
+   "sha256": "1ef0add8af8d485c46c1f45cef02c6ec5237b8fe5f7911cecfb643e412cdb771",
+   "command": "python3 sim/vods_sim.py lattice",
+   "parameters": {
+    "experiment": "lattice",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p500_wedge_genie_64k.json": {
+   "sha256": "c53f7ab9b652460adb2df591569c3fa2f7d71eb267eaf87ce5c5d6eca3b32e9c",
+   "command": "python3 sim/vods_sim.py extra",
+   "parameters": {
+    "experiment": "extra",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p500_wedge_genie_64k_j10.json": {
+   "sha256": "3be99bb1a4bf12c2c42c0c3036b864052dc72258cd77f3b1baf55f6c7c2963c1",
+   "command": "python3 sim/vods_sim.py extra",
+   "parameters": {
+    "experiment": "extra",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p600_apsk16_64k.json": {
+   "sha256": "d6793584b8df0a976779699993224e7fef19b6ed573ecd145ff919455fbaea14",
+   "command": "python3 sim/vods_sim.py extra",
+   "parameters": {
+    "experiment": "extra",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p600_apsk16_64k_j10.json": {
+   "sha256": "c4afd6fe7f20b1fcc77ebe79890f6e3f0b3e7080944bc2bbad53bf7e8c8323ff",
+   "command": "python3 sim/vods_sim.py extra",
+   "parameters": {
+    "experiment": "extra",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p600_apsk16_genie_64k_j10.json": {
+   "sha256": "73dc82395398da065aebe464329e3d0789efa88f05b811498d7168606ba3e7e2",
+   "command": "python3 sim/vods_sim.py extra",
+   "parameters": {
+    "experiment": "extra",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p600_ideal_640k.json": {
+   "sha256": "75d38993e5ca78045d0fa6c530d1b66e4975f11415c16c0307340b859c7c626a",
+   "command": "python3 sim/vods_sim.py lattice",
+   "parameters": {
+    "experiment": "lattice",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p600_ideal_64k.json": {
+   "sha256": "b85dc710a2ebe3ba79eb2ac76a97eca533c729118eeb648541ad2e45b1ac1be8",
+   "command": "python3 sim/vods_sim.py lattice",
+   "parameters": {
+    "experiment": "lattice",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p600_ideal_6k4.json": {
+   "sha256": "9cf19c0e097e95c0b6f0127dfd221b173a2f78d1007832505e1be3eec384ce6c",
+   "command": "python3 sim/vods_sim.py lattice",
+   "parameters": {
+    "experiment": "lattice",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p600_realistic_64k_j10.json": {
+   "sha256": "35751bc6dcf58991bb88731a6260fb2afb289053a4c7c6ab0ad92df99f8297c8",
+   "command": "python3 sim/vods_sim.py lattice",
+   "parameters": {
+    "experiment": "lattice",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p600_wedge_genie_64k.json": {
+   "sha256": "01f4bdc0ac760f7ac82641f08e3d97162bb6bf2167a8dddc12f660060169f407",
+   "command": "python3 sim/vods_sim.py extra",
+   "parameters": {
+    "experiment": "extra",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p600_wedge_genie_64k_j10.json": {
+   "sha256": "868a381cefa8673df87c656f5e16f82fa438e6be315aedfa9c687e383c9e5858",
+   "command": "python3 sim/vods_sim.py extra",
+   "parameters": {
+    "experiment": "extra",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p800_apsk16_64k.json": {
+   "sha256": "642f3d0dbe5758b536b1c272dc9810b38fb12c50b5f2dd5b3c089805d2be6329",
+   "command": "python3 sim/vods_sim.py extra",
+   "parameters": {
+    "experiment": "extra",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p800_apsk16_64k_j10.json": {
+   "sha256": "a9ca395abfc99f90d4d9025d60ffde839f60580d3b7f6b7d9c295e14932f228a",
+   "command": "python3 sim/vods_sim.py extra",
+   "parameters": {
+    "experiment": "extra",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p800_apsk16_genie_64k_j10.json": {
+   "sha256": "ef75998ec2ba432a095677fd22e4fda84bfea009463f571ecff1840bf18e2a82",
+   "command": "python3 sim/vods_sim.py extra",
+   "parameters": {
+    "experiment": "extra",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p800_ideal_640k.json": {
+   "sha256": "6bebacc946d2d9299d7282649dd2f75896a09e8f7bbe647e26cf69b6fe75266a",
+   "command": "python3 sim/vods_sim.py lattice",
+   "parameters": {
+    "experiment": "lattice",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p800_ideal_64k.json": {
+   "sha256": "25a6d015a4e7e0734567794822a93c78a440ab3333301e43a79f8fb75b304477",
+   "command": "python3 sim/vods_sim.py lattice",
+   "parameters": {
+    "experiment": "lattice",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p800_ideal_6k4.json": {
+   "sha256": "40174343c1c1b07b2519386082ce827f10f6127a124075bc7a5d3fdc430eec0e",
+   "command": "python3 sim/vods_sim.py lattice",
+   "parameters": {
+    "experiment": "lattice",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p800_realistic_64k_j10.json": {
+   "sha256": "67efd61ff0cf4abeeb6731f9d78ed670853d22ea792ad64a06702090b06d69e7",
+   "command": "python3 sim/vods_sim.py lattice",
+   "parameters": {
+    "experiment": "lattice",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p800_wedge_genie_64k.json": {
+   "sha256": "61e8837e2e45c76c985658d3198fc860813229727489148a761374d184e0b916",
+   "command": "python3 sim/vods_sim.py extra",
+   "parameters": {
+    "experiment": "extra",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "lattice_p800_wedge_genie_64k_j10.json": {
+   "sha256": "8217e12f04125eb2b6bfa0aa48c91fccba735068d57b8b21bea8462c338489b0",
+   "command": "python3 sim/vods_sim.py extra",
+   "parameters": {
+    "experiment": "extra",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "rle.json": {
+   "sha256": "90c858ee5341e44257c622e746d04572a4f251d16189114a73600f510930c790",
+   "command": "python3 sim/vods_sim.py rle",
+   "parameters": {
+    "experiment": "rle"
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "samm.json": {
+   "sha256": "deb9f036ed4cbe70378d4ea50717372063ce944059bc4d3c28a219bcfbe930af",
+   "command": "python3 sim/samm_sim.py",
+   "parameters": {
+    "trials": 200,
+    "na": [
+     0.25,
+     0.45,
+     0.65
+    ]
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "samm_sensitivity.json": {
+   "sha256": "4d94ee93a4ed362a455ceb414fa2ee74c7b36d62a78a662f3db100078d5af039",
+   "command": "SENS=1 python3 sim/samm_sim.py",
+   "parameters": {
+    "sensitivity": true,
+    "trials": 120
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "sensitivity.json": {
+   "sha256": "640a83eff462783973df43c08ec78695d0b1c22246deab69862a1b97d55565bd",
+   "command": "python3 sim/vods_sim.py sensitivity",
+   "parameters": {
+    "experiment": "sensitivity",
+    "trials": 2000
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "skew.json": {
+   "sha256": "f76035560bd8274c088390c19c1bf5db5a1ed72048de27fc71d832608c044efc",
+   "command": "python3 sim/vods_sim.py skew",
+   "parameters": {
+    "experiment": "skew"
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "spread.json": {
+   "sha256": "586bda7bb9606b79df3f2e15328affcd5c2751fa5ac6da07e224ce16b64a7b7f",
+   "command": "python3 sim/vods_sim.py spread",
+   "parameters": {
+    "experiment": "spread",
+    "trials": 2000,
+    "seeds": 5
+   },
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  },
+  "summary.json": {
+   "sha256": "c38e0c5e9de47edf5996d356320cf6045c91824b058bd5b4e1922a79214317ee",
+   "command": "python3 sim/make_figures.py",
+   "parameters": {},
+   "commit": "d65acbe",
+   "simulator_modified": false,
+   "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39"
+   },
+   "created_utc": "before 2026-11-16T02:18:45Z (v1.0.0 commit time)",
+   "note": "Entry written retrospectively in v1.1.0 for a v1.0.0 result; the run used this environment."
+  }
+ }
+}

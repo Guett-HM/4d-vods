@@ -146,10 +146,10 @@
       <div>
         <h1 id="title">Data in glass that a cheap microscope can read at any angle</h1>
         <p class="lede">An open simulation study of archival storage in laser-written glass, with a self-aligning 2D code for low-cost readers.</p>
-        <p class="byline">Hakim Guettal, version 1.0, November 2026</p>
+        <p class="byline">Hakim Guettal, version 1.1, November 2026</p>
         <p class="about">I am not a professional physicist. 4D-VODS started as a geometric intuition (storing data in the shape of engraved symbols) and grew into this conceptual study and simulator, built with the help of AI tools on standard diffraction optics. Corrections from specialists are very welcome.</p>
         <div class="actions">
-          <a class="btn primary" href="docs/4D-VODS_White_Paper_v1.0.pdf">Read the white paper (PDF)</a>
+          <a class="btn primary" href="docs/4D-VODS_White_Paper_v1.1.pdf">Read the white paper (PDF)</a>
           <a class="btn quiet" href="docs/4D-VODS_Technical_Note_TN-001.pdf">Technical note</a>
           <a class="btn quiet" id="repo-link" href="README.md">Source code</a>
         </div>
@@ -184,10 +184,11 @@
       <div class="layers">
         <div class="layer">
           <h3>High-density data layer</h3>
-          <p class="big">42.6 <small>bits per µm²</small></p>
-          <p>About 47 GB per layer of a 12 cm disc, 1.9 times a Blu-ray layer.</p>
+          <p class="big">42.6 <small>bits per µm² before error correction</small></p>
+          <p>About 47 GB per layer of a 12 cm disc. After pilots and error correction, roughly 35 bits per µm²: about 1.15 times a BDXL layer (estimate, not yet simulated).</p>
           <dl>
-            <dt>Symbol</dt><dd>Round dot with 8 depths × 2 reflectances (APSK-16, 4 bits)</dd>
+            <dt>Symbol</dt><dd>Square dot, 0.6 × pitch, with 8 depths × 2 reflectances (APSK-16, 4 bits)</dd>
+            <dt>Medium</dt><dd>Metallised relief sealed under a cover layer</dd>
             <dt>Pitch</dt><dd>300 nm</dd>
             <dt>Reader</dt><dd>Interferometric microscope, 405 nm, NA 0.90</dd>
           </dl>
@@ -195,11 +196,12 @@
         <div class="layer">
           <h3>Self-aligning micro-matrix (SAMM)</h3>
           <p class="big">599 <small>of 600 frames aligned</small></p>
-          <p>At any rotation, ±3% scale and tilted light, read by bright-field cameras from a USB microscope to a 40× objective.</p>
+          <p>At any rotation, ±3% scale and tilted light, read by bright-field cameras from an entry-level 10× objective to a 40× objective.</p>
           <dl>
             <dt>Symbol</dt><dd>Square dot with 4 grey levels (2 bits)</dd>
-            <dt>Pitch</dt><dd>1.1 × λ/NA of the reader (0.69–1.78 µm)</dd>
-            <dt>Density</dt><dd>Up to 3.75 bits per µm² (about 47 MB per cm²)</dd>
+            <dt>Pitch</dt><dd>1.1 × λ/NA of the reader (0.69–1.78 µm at 405 nm)</dd>
+            <dt>Medium</dt><dd>Laser-ablated absorbing film on the glass</dd>
+            <dt>Density</dt><dd>Up to 3.75 bits per µm² at 405 nm (about 47 MB per cm²)</dd>
           </dl>
         </div>
       </div>
@@ -210,11 +212,11 @@
     <div class="wrap">
       <h2 id="results-title">What the simulation found</h2>
       <div class="prose">
-        <p>The project started from an 8-bit "Voxel-Wedge": one asymmetric engraving whose direction, depth, curvature and reflectance each carry bits. At 150 nm it would hold 356 bits per µm². The simulator shows why it cannot: the optics resolve about 225 nm, so shape-encoded bits vanish first. Round multi-level dots carry more information at small pitch.</p>
+        <p>The project started from an 8-bit "Voxel-Wedge": one asymmetric engraving whose direction, depth, curvature and reflectance each carry bits. At 150 nm it would hold 356 bits per µm². The simulator shows why it cannot: the optics resolve about 225 nm, so shape-encoded bits vanish first. Small multi-level dots carry more information at small pitch.</p>
       </div>
 
       <figure>
-        <img src="figures/fig0_symbols.png" alt="Three wedge symbols and two round dots as written, as read at 500 nm pitch, and as read at 150 nm pitch, where all of them look like the same faint blur" loading="lazy">
+        <img src="figures/fig0_symbols.png" alt="Three wedge symbols and two square dots as written, as read at 500 nm pitch, and as read at 150 nm pitch, where all of them look like the same faint blur" loading="lazy">
         <figcaption>At 500 nm each symbol leaves a distinct footprint in the reader's image; at 150 nm every symbol fades into the same blur.</figcaption>
       </figure>
 
@@ -236,12 +238,12 @@
 
       <div class="tablewrap">
         <table>
-          <caption>SAMM operating points at a pitch of 1.1 × λ/NA, 200 randomly rotated frames each</caption>
+          <caption>SAMM operating points at a pitch of 1.1 × λ/NA, 200 randomly rotated frames each; pitches and data per cm² at 405 nm</caption>
           <thead>
             <tr><th scope="col">Reader</th><th scope="col">NA</th><th scope="col">Pitch</th><th scope="col">Frames aligned</th><th scope="col">Symbol error</th><th scope="col">Data per cm²</th></tr>
           </thead>
           <tbody>
-            <tr><td>USB or phone-clip microscope</td><td class="num">0.25</td><td class="num">1.78 µm</td><td class="num">200 of 200</td><td class="num">0.02%</td><td class="num">about 7 MB</td></tr>
+            <tr><td>Entry-level 10× objective</td><td class="num">0.25</td><td class="num">1.78 µm</td><td class="num">200 of 200</td><td class="num">0.02%</td><td class="num">about 7 MB</td></tr>
             <tr><td>Budget 20× objective</td><td class="num">0.45</td><td class="num">0.99 µm</td><td class="num">199 of 200</td><td class="num">0.25%</td><td class="num">about 22 MB</td></tr>
             <tr><td>Budget 40× objective</td><td class="num">0.65</td><td class="num">0.69 µm</td><td class="num">200 of 200</td><td class="num">0.02%</td><td class="num">about 47 MB</td></tr>
           </tbody>
@@ -273,19 +275,19 @@
     <div class="wrap">
       <h2 id="repro-title">Reproduce every number</h2>
       <div class="prose">
-        <p>The simulator is plain Python with fixed random seeds, so a full run gives exactly the published results. The quick mode checks that everything works in a couple of minutes.</p>
+        <p>The simulator is plain Python with fixed random seeds, so a full run gives exactly the published results. Every result file records the command, commit and software versions that produced it, the optics are checked against closed-form diffraction theory, and every number quoted on this page is checked automatically against the results.</p>
       </div>
 <pre><code>pip install -r requirements.txt
-pytest -q tests                      # sanity tests
+pytest -q                                   # ~50 tests, about 1 minute
+python -m vods validate                     # physics checks against theory
+python -m vods check                        # every published number vs the results
 
-QUICK=1 python3 sim/vods_sim.py      # quick check, writes to results_quick/
-QUICK=1 python3 sim/samm_sim.py
-
-python3 sim/vods_sim.py              # full data-layer study
-python3 sim/samm_sim.py              # full SAMM study
-python3 sim/make_figures.py          # all charts</code></pre>
+python -m vods run samm --config configs/quick.toml        # quick check
+python -m vods run datalayer --config configs/datalayer.toml
+python -m vods run samm --config configs/samm.toml
+python -m vods figures                      # all charts (PNG, PDF and CSV)</code></pre>
       <div class="prose">
-        <p>The raw results behind every figure are in the <a href="results/">results</a> folder, and the design history from the first hand-drawn triangles is in <a href="HISTORY.md">HISTORY.md</a>.</p>
+        <p>The raw results behind every figure are in the <a href="https://github.com/GuettHM/4d-vods/tree/main/results">results</a> folder, the validation report is in <a href="https://github.com/GuettHM/4d-vods/blob/main/docs/VALIDATION.md">VALIDATION.md</a>, corrections to earlier versions are in <a href="https://github.com/GuettHM/4d-vods/blob/main/ERRATA.md">ERRATA.md</a>, and the design history from the first hand-drawn triangles is in <a href="https://github.com/GuettHM/4d-vods/blob/main/HISTORY.md">HISTORY.md</a>.</p>
       </div>
     </div>
   </section>
@@ -293,9 +295,9 @@ python3 sim/make_figures.py          # all charts</code></pre>
   <section class="block" id="cite" aria-labelledby="cite-title">
     <div class="wrap">
       <h2 id="cite-title">Cite this work</h2>
-      <p class="cite prose">Guettal, H. (2026). <em>4D-VODS: optical data storage in glass with a self-aligning code for low-cost readers</em>, version 1.0.0. Zenodo. <span id="doi">DOI assigned on release.</span></p>
+      <p class="cite prose">Guettal, H. (2026). <em>4D-VODS: optical data storage in glass with a self-aligning code for low-cost readers</em>, version 1.1.0. Zenodo. <span id="doi">DOI assigned on release.</span></p>
       <div class="prose">
-        <p>Related work this study builds on: Microsoft Project Silica, 5D optical storage from the University of Southampton, Cerabyte ceramic storage, holographic storage, and QR, Data Matrix and Aztec codes. Every result can be checked by re-running the code.</p>
+        <p>Related work this study builds on: Microsoft Project Silica, 5D optical storage from the University of Southampton, Cerabyte ceramic storage, Blu-ray and BDXL, holographic storage, and QR, Data Matrix and Aztec codes. Every result can be checked by re-running the code.</p>
       </div>
     </div>
   </section>
@@ -303,7 +305,7 @@ python3 sim/make_figures.py          # all charts</code></pre>
 
 <footer>
   <div class="wrap">
-    <p>© 2026 Hakim Guettal. Code under the <a href="LICENSE">MIT License</a>; documents and figures under <a href="docs/LICENSE.md">CC BY 4.0</a>.</p>
+    <p>© 2026 Hakim Guettal. Code under the <a href="https://github.com/GuettHM/4d-vods/blob/main/LICENSE">MIT License</a>; documents and figures under <a href="https://github.com/GuettHM/4d-vods/blob/main/docs/LICENSE.md">CC BY 4.0</a>.</p>
   </div>
 </footer>
 

@@ -134,7 +134,6 @@ class Reader:
         return cam * gain
 
     def _finder_template(self):
-        T = (0.0, 1.0, 0.0, 0.0)
         # isolated bullseye on bright background, centred at the origin
         u = self.X / self.p + 1.5
         v = self.Y / self.p + 1.5
@@ -167,8 +166,10 @@ class Reader:
         pts = []
         for r0, c0 in zip(rr[order], cc[order]):
             if 0 < r0 < ncc.shape[0] - 1 and 0 < c0 < ncc.shape[1] - 1:
-                dr = 0.5 * (ncc[r0 - 1, c0] - ncc[r0 + 1, c0]) / (ncc[r0 - 1, c0] - 2 * ncc[r0, c0] + ncc[r0 + 1, c0] + 1e-12)
-                dc = 0.5 * (ncc[r0, c0 - 1] - ncc[r0, c0 + 1]) / (ncc[r0, c0 - 1] - 2 * ncc[r0, c0] + ncc[r0, c0 + 1] + 1e-12)
+                dr = 0.5 * (ncc[r0 - 1, c0] - ncc[r0 + 1, c0]) / (
+                    ncc[r0 - 1, c0] - 2 * ncc[r0, c0] + ncc[r0 + 1, c0] + 1e-12)
+                dc = 0.5 * (ncc[r0, c0 - 1] - ncc[r0, c0 + 1]) / (
+                    ncc[r0, c0 - 1] - 2 * ncc[r0, c0] + ncc[r0, c0 + 1] + 1e-12)
                 pts.append((r0 + np.clip(dr, -1, 1), c0 + np.clip(dc, -1, 1), ncc[r0, c0]))
         side = (N - 3) * self.p / self.pix
         cands = []
@@ -339,7 +340,8 @@ def run_sensitivity(trials=120, seed=77, na=0.45):
             out.append({"case": label, "na": na, "pitch_over_lambda_na": k, "pitch_um": p,
                         "noise": noise, "jitter": jitter, "align_success": float(np.mean(oks)),
                         "align_ci95": [lo, hi], "ser": float(np.mean(x != y)), "bits_per_cell": mi4(x, y)})
-            print(f"{label:24s} k={k} align={np.mean(oks):.3f} [{lo:.3f},{hi:.3f}] SER={np.mean(x != y):.4f}", flush=True)
+            print(f"{label:24s} k={k} align={np.mean(oks):.3f} [{lo:.3f},{hi:.3f}] "
+                  f"SER={np.mean(x != y):.4f}", flush=True)
     return out
 
 

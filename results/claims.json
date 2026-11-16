@@ -1,0 +1,798 @@
+{
+ "description": "Every number quoted in the README, the project page and the documents, with how to recompute it from results/ and where it is quoted. Checked by python -m vods check and tests/test_claims.py.",
+ "constants": {
+  "disc_area_um2": 8758800000.0
+ },
+ "claims": [
+  {
+   "id": "apsk16_density_300nm",
+   "description": "APSK-16 at 300 nm, practical decoder, 10% writing variability: information before error correction",
+   "file": "lattice_p300_apsk16_64k_j10.json",
+   "path": [
+    "density_bits_per_um2"
+   ],
+   "format": "{:.1f}",
+   "snippets": [
+    "{v} bits/µm²",
+    "{v} bits per µm²",
+    "{v} <small>bits per µm²"
+   ],
+   "expect": "42.6",
+   "cited_in": [
+    "README.md",
+    "index.html",
+    "ERRATA.md",
+    "docs/src/white-paper.md",
+    "docs/src/technical-note-TN-001.md"
+   ]
+  },
+  {
+   "id": "apsk16_bits_per_symbol",
+   "description": "APSK-16 at 300 nm: bits recovered per cell (of 4)",
+   "file": "lattice_p300_apsk16_64k_j10.json",
+   "path": [
+    "bits_per_symbol_lb"
+   ],
+   "format": "{:.2f}",
+   "snippets": [
+    "{v} of 4"
+   ],
+   "expect": "3.83",
+   "cited_in": [
+    "docs/src/technical-note-TN-001.md"
+   ]
+  },
+  {
+   "id": "apsk16_ser",
+   "description": "APSK-16 at 300 nm: symbol error rate before error correction",
+   "file": "lattice_p300_apsk16_64k_j10.json",
+   "path": [
+    "symbol_error_rate"
+   ],
+   "format": "{:.1%}",
+   "snippets": [
+    "{v}"
+   ],
+   "expect": "2.4%",
+   "cited_in": [
+    "docs/src/technical-note-TN-001.md"
+   ]
+  },
+  {
+   "id": "wedge_density_500nm",
+   "description": "Voxel-Wedge at 500 nm, practical decoder, 10% writing variability",
+   "file": "lattice_p500_realistic_64k_j10.json",
+   "path": [
+    "density_bits_per_um2"
+   ],
+   "format": "{:.1f}",
+   "snippets": [
+    "{v} bits/µm²",
+    "{v} bits per µm²",
+    "{v} <small>bits per µm²"
+   ],
+   "expect": "26.8",
+   "cited_in": [
+    "README.md",
+    "docs/src/white-paper.md",
+    "docs/src/technical-note-TN-001.md"
+   ]
+  },
+  {
+   "id": "apsk16_seed_spread",
+   "description": "APSK-16 at 300 nm: standard deviation over 5 further seeds",
+   "file": "spread.json",
+   "path": [
+    {
+     "alphabet": "apsk16"
+    },
+    "std"
+   ],
+   "format": "{:.2f}",
+   "snippets": [
+    "± {v}"
+   ],
+   "expect": "0.07",
+   "cited_in": [
+    "README.md",
+    "docs/src/white-paper.md",
+    "docs/src/technical-note-TN-001.md"
+   ]
+  },
+  {
+   "id": "wedge_seed_spread",
+   "description": "Voxel-Wedge at 500 nm: standard deviation over 5 further seeds",
+   "file": "spread.json",
+   "path": [
+    {
+     "alphabet": "wedge256"
+    },
+    "std"
+   ],
+   "format": "{:.2f}",
+   "snippets": [
+    "± {v}"
+   ],
+   "expect": "0.15",
+   "cited_in": [
+    "README.md",
+    "docs/src/white-paper.md",
+    "docs/src/technical-note-TN-001.md"
+   ]
+  },
+  {
+   "id": "apsk16_seed_mean",
+   "description": "APSK-16 at 300 nm: mean over 5 further seeds",
+   "file": "spread.json",
+   "path": [
+    {
+     "alphabet": "apsk16"
+    },
+    "mean"
+   ],
+   "format": "{:.2f}",
+   "snippets": [
+    "{v} ±"
+   ],
+   "expect": "42.56",
+   "cited_in": [
+    "docs/src/white-paper.md"
+   ]
+  },
+  {
+   "id": "naive_estimate_150nm",
+   "description": "Naive estimate: 8 bits per symbol at 150 nm",
+   "file": "summary.json",
+   "path": [
+    "rows",
+    0,
+    "claim"
+   ],
+   "format": "{:.0f}",
+   "snippets": [
+    "{v} bits"
+   ],
+   "expect": "356",
+   "cited_in": [
+    "README.md",
+    "index.html"
+   ]
+  },
+  {
+   "id": "bluray_net",
+   "description": "Blu-ray 25 GB layer, net user data per µm² (data zone 24-58 mm)",
+   "file": "summary.json",
+   "path": [
+    "bd_bits_per_um2"
+   ],
+   "format": "{:.1f}",
+   "snippets": [
+    "{v} bits/µm²",
+    "{v} bits per µm²",
+    "{v} <small>bits per µm²"
+   ],
+   "expect": "22.8",
+   "cited_in": [
+    "README.md",
+    "ERRATA.md",
+    "docs/src/white-paper.md"
+   ]
+  },
+  {
+   "id": "bdxl_net",
+   "description": "BDXL 33.4 GB layer (same optics as Blu-ray), net user data per µm²",
+   "expr": "bluray_net * 33.4 / 25",
+   "format": "{:.1f}",
+   "snippets": [
+    "{v} bits/µm²",
+    "{v} bits per µm²",
+    "{v} <small>bits per µm²"
+   ],
+   "expect": "30.5",
+   "cited_in": [
+    "README.md",
+    "ERRATA.md",
+    "docs/src/white-paper.md"
+   ]
+  },
+  {
+   "id": "apsk16_capacity_gb",
+   "description": "APSK-16 capacity per 12 cm disc layer before error correction",
+   "expr": "apsk16_density_300nm * disc_area_um2 / 8e9",
+   "format": "{:.0f}",
+   "snippets": [
+    "{v} GB"
+   ],
+   "expect": "47",
+   "cited_in": [
+    "README.md",
+    "index.html",
+    "docs/src/white-paper.md",
+    "docs/src/technical-note-TN-001.md"
+   ]
+  },
+  {
+   "id": "wedge_capacity_gb",
+   "description": "Voxel-Wedge capacity per 12 cm disc layer before error correction",
+   "expr": "wedge_density_500nm * disc_area_um2 / 8e9",
+   "format": "{:.0f}",
+   "snippets": [
+    "{v} GB"
+   ],
+   "expect": "29",
+   "cited_in": [
+    "README.md",
+    "docs/src/white-paper.md",
+    "docs/src/technical-note-TN-001.md"
+   ]
+  },
+  {
+   "id": "ecc_rate",
+   "description": "Planned overall error-correction rate: LDPC 0.94 x RS(255, 239)",
+   "expr": "0.94 * 239 / 255",
+   "format": "{:.2f}",
+   "snippets": [
+    "≈ {v}",
+    "rate {v}",
+    "rate ≈ {v}"
+   ],
+   "expect": "0.88",
+   "cited_in": [
+    "ERRATA.md",
+    "docs/src/white-paper.md",
+    "docs/src/technical-note-TN-001.md"
+   ]
+  },
+  {
+   "id": "ecc_parity",
+   "description": "Planned error-correction parity share",
+   "expr": "1 - ecc_rate",
+   "format": "{:.0%}",
+   "snippets": [
+    "{v} parity",
+    "about {v}"
+   ],
+   "expect": "12%",
+   "cited_in": [
+    "README.md",
+    "ERRATA.md",
+    "docs/src/white-paper.md",
+    "docs/src/technical-note-TN-001.md"
+   ]
+  },
+  {
+   "id": "ecc_parity_v10",
+   "description": "Parity share of the v1.0 target (LDPC 0.9 x RS(255, 223)), corrected in v1.1",
+   "expr": "1 - 0.9 * 223 / 255",
+   "format": "{:.0%}",
+   "snippets": [
+    "{v} parity"
+   ],
+   "expect": "21%",
+   "cited_in": [
+    "ERRATA.md",
+    "docs/src/technical-note-TN-001.md"
+   ]
+  },
+  {
+   "id": "apsk16_net_estimate",
+   "description": "Indicative APSK-16 user density after pilots (15/16) and error correction",
+   "expr": "apsk16_density_300nm * 15 / 16 * ecc_rate",
+   "format": "{:.0f}",
+   "snippets": [
+    "{v} bits/µm²",
+    "{v} bits per µm²"
+   ],
+   "expect": "35",
+   "cited_in": [
+    "README.md",
+    "index.html",
+    "ERRATA.md",
+    "docs/src/white-paper.md",
+    "docs/src/technical-note-TN-001.md"
+   ]
+  },
+  {
+   "id": "apsk16_net_vs_bdxl",
+   "description": "Indicative APSK-16 user density relative to BDXL",
+   "expr": "apsk16_net_estimate / bdxl_net",
+   "format": "{:.2f}",
+   "snippets": [
+    "{v}×",
+    "{v} times"
+   ],
+   "expect": "1.15",
+   "cited_in": [
+    "README.md",
+    "index.html",
+    "ERRATA.md",
+    "docs/src/white-paper.md"
+   ]
+  },
+  {
+   "id": "apsk16_net_capacity_gb",
+   "description": "Indicative APSK-16 user capacity per 12 cm disc layer",
+   "expr": "apsk16_net_estimate * disc_area_um2 / 8e9",
+   "format": "{:.0f}",
+   "snippets": [
+    "about {v} GB"
+   ],
+   "expect": "39",
+   "cited_in": [
+    "docs/src/white-paper.md"
+   ]
+  },
+  {
+   "id": "samm_align_025",
+   "description": "SAMM alignment success rate at NA 0.25, pitch 1.1 x lambda/NA",
+   "file": "samm.json",
+   "path": [
+    {
+     "na": 0.25,
+     "pitch_over_lambda_na": 1.1
+    },
+    "align_success"
+   ],
+   "format": "{:.3f}",
+   "snippets": [],
+   "expect": "1.000",
+   "cited_in": []
+  },
+  {
+   "id": "samm_aligned_025",
+   "description": "SAMM frames aligned (of 200) at NA 0.25",
+   "expr": "samm_align_025 * 200",
+   "format": "{:.0f}",
+   "snippets": [
+    "{v}/200",
+    "{v} of 200"
+   ],
+   "expect": "200",
+   "cited_in": [
+    "README.md",
+    "index.html",
+    "docs/src/white-paper.md",
+    "docs/src/technical-note-TN-001.md"
+   ]
+  },
+  {
+   "id": "samm_density_025",
+   "description": "SAMM net density at NA 0.25, 405 nm",
+   "file": "samm.json",
+   "path": [
+    {
+     "na": 0.25,
+     "pitch_over_lambda_na": 1.1
+    },
+    "net_density_bits_per_um2"
+   ],
+   "format": "{:.2f}",
+   "snippets": [
+    "{v} bits/µm²",
+    "{v} bits per µm²",
+    "{v} <small>bits per µm²"
+   ],
+   "expect": "0.55",
+   "cited_in": [
+    "README.md",
+    "docs/src/white-paper.md",
+    "docs/src/technical-note-TN-001.md"
+   ]
+  },
+  {
+   "id": "samm_ser_025",
+   "description": "SAMM symbol error rate at NA 0.25",
+   "file": "samm.json",
+   "path": [
+    {
+     "na": 0.25,
+     "pitch_over_lambda_na": 1.1
+    },
+    "ser"
+   ],
+   "format": "{:.2%}",
+   "snippets": [
+    "{v}"
+   ],
+   "expect": "0.02%",
+   "cited_in": [
+    "README.md",
+    "index.html",
+    "docs/src/white-paper.md",
+    "docs/src/technical-note-TN-001.md"
+   ]
+  },
+  {
+   "id": "samm_pitch_025",
+   "description": "SAMM pitch at NA 0.25, 405 nm",
+   "file": "samm.json",
+   "path": [
+    {
+     "na": 0.25,
+     "pitch_over_lambda_na": 1.1
+    },
+    "pitch_um"
+   ],
+   "format": "{:.2f}",
+   "snippets": [
+    "{v} µm"
+   ],
+   "expect": "1.78",
+   "cited_in": [
+    "README.md",
+    "index.html",
+    "ERRATA.md",
+    "docs/src/white-paper.md",
+    "docs/src/technical-note-TN-001.md"
+   ]
+  },
+  {
+   "id": "samm_align_045",
+   "description": "SAMM alignment success rate at NA 0.45, pitch 1.1 x lambda/NA",
+   "file": "samm.json",
+   "path": [
+    {
+     "na": 0.45,
+     "pitch_over_lambda_na": 1.1
+    },
+    "align_success"
+   ],
+   "format": "{:.3f}",
+   "snippets": [],
+   "expect": "0.995",
+   "cited_in": []
+  },
+  {
+   "id": "samm_aligned_045",
+   "description": "SAMM frames aligned (of 200) at NA 0.45",
+   "expr": "samm_align_045 * 200",
+   "format": "{:.0f}",
+   "snippets": [
+    "{v}/200",
+    "{v} of 200"
+   ],
+   "expect": "199",
+   "cited_in": [
+    "README.md",
+    "index.html",
+    "docs/src/white-paper.md",
+    "docs/src/technical-note-TN-001.md"
+   ]
+  },
+  {
+   "id": "samm_density_045",
+   "description": "SAMM net density at NA 0.45, 405 nm",
+   "file": "samm.json",
+   "path": [
+    {
+     "na": 0.45,
+     "pitch_over_lambda_na": 1.1
+    },
+    "net_density_bits_per_um2"
+   ],
+   "format": "{:.2f}",
+   "snippets": [
+    "{v} bits/µm²",
+    "{v} bits per µm²",
+    "{v} <small>bits per µm²"
+   ],
+   "expect": "1.77",
+   "cited_in": [
+    "README.md",
+    "docs/src/white-paper.md",
+    "docs/src/technical-note-TN-001.md"
+   ]
+  },
+  {
+   "id": "samm_ser_045",
+   "description": "SAMM symbol error rate at NA 0.45",
+   "file": "samm.json",
+   "path": [
+    {
+     "na": 0.45,
+     "pitch_over_lambda_na": 1.1
+    },
+    "ser"
+   ],
+   "format": "{:.2%}",
+   "snippets": [
+    "{v}"
+   ],
+   "expect": "0.25%",
+   "cited_in": [
+    "README.md",
+    "index.html",
+    "docs/src/white-paper.md",
+    "docs/src/technical-note-TN-001.md"
+   ]
+  },
+  {
+   "id": "samm_pitch_045",
+   "description": "SAMM pitch at NA 0.45, 405 nm",
+   "file": "samm.json",
+   "path": [
+    {
+     "na": 0.45,
+     "pitch_over_lambda_na": 1.1
+    },
+    "pitch_um"
+   ],
+   "format": "{:.2f}",
+   "snippets": [
+    "{v} µm"
+   ],
+   "expect": "0.99",
+   "cited_in": [
+    "README.md",
+    "index.html",
+    "docs/src/white-paper.md",
+    "docs/src/technical-note-TN-001.md"
+   ]
+  },
+  {
+   "id": "samm_align_065",
+   "description": "SAMM alignment success rate at NA 0.65, pitch 1.1 x lambda/NA",
+   "file": "samm.json",
+   "path": [
+    {
+     "na": 0.65,
+     "pitch_over_lambda_na": 1.1
+    },
+    "align_success"
+   ],
+   "format": "{:.3f}",
+   "snippets": [],
+   "expect": "1.000",
+   "cited_in": []
+  },
+  {
+   "id": "samm_aligned_065",
+   "description": "SAMM frames aligned (of 200) at NA 0.65",
+   "expr": "samm_align_065 * 200",
+   "format": "{:.0f}",
+   "snippets": [
+    "{v}/200",
+    "{v} of 200"
+   ],
+   "expect": "200",
+   "cited_in": [
+    "README.md",
+    "index.html",
+    "docs/src/white-paper.md",
+    "docs/src/technical-note-TN-001.md"
+   ]
+  },
+  {
+   "id": "samm_density_065",
+   "description": "SAMM net density at NA 0.65, 405 nm",
+   "file": "samm.json",
+   "path": [
+    {
+     "na": 0.65,
+     "pitch_over_lambda_na": 1.1
+    },
+    "net_density_bits_per_um2"
+   ],
+   "format": "{:.2f}",
+   "snippets": [
+    "{v} bits/µm²",
+    "{v} bits per µm²",
+    "{v} <small>bits per µm²"
+   ],
+   "expect": "3.75",
+   "cited_in": [
+    "README.md",
+    "index.html",
+    "docs/src/white-paper.md",
+    "docs/src/technical-note-TN-001.md"
+   ]
+  },
+  {
+   "id": "samm_ser_065",
+   "description": "SAMM symbol error rate at NA 0.65",
+   "file": "samm.json",
+   "path": [
+    {
+     "na": 0.65,
+     "pitch_over_lambda_na": 1.1
+    },
+    "ser"
+   ],
+   "format": "{:.2%}",
+   "snippets": [
+    "{v}"
+   ],
+   "expect": "0.02%",
+   "cited_in": [
+    "README.md",
+    "index.html",
+    "docs/src/white-paper.md",
+    "docs/src/technical-note-TN-001.md"
+   ]
+  },
+  {
+   "id": "samm_pitch_065",
+   "description": "SAMM pitch at NA 0.65, 405 nm",
+   "file": "samm.json",
+   "path": [
+    {
+     "na": 0.65,
+     "pitch_over_lambda_na": 1.1
+    },
+    "pitch_um"
+   ],
+   "format": "{:.2f}",
+   "snippets": [
+    "{v} µm"
+   ],
+   "expect": "0.69",
+   "cited_in": [
+    "README.md",
+    "index.html",
+    "docs/src/white-paper.md",
+    "docs/src/technical-note-TN-001.md"
+   ]
+  },
+  {
+   "id": "samm_aligned_total",
+   "description": "SAMM frames aligned at 1.1 x lambda/NA, three readers, 600 frames",
+   "expr": "round(samm_aligned_025 + samm_aligned_045 + samm_aligned_065)",
+   "format": "{:.0f}",
+   "snippets": [
+    "{v} of 600",
+    "{v} <small>of 600"
+   ],
+   "expect": "599",
+   "cited_in": [
+    "index.html",
+    "docs/src/white-paper.md",
+    "docs/src/technical-note-TN-001.md"
+   ]
+  },
+  {
+   "id": "samm_ci_low_045_raw",
+   "description": "Lower 95% Wilson bound of SAMM alignment at NA 0.45 (fraction)",
+   "file": "samm.json",
+   "path": [
+    {
+     "na": 0.45,
+     "pitch_over_lambda_na": 1.1
+    },
+    "align_ci95",
+    0
+   ],
+   "format": "{:.4f}",
+   "snippets": [],
+   "expect": "0.9722",
+   "cited_in": []
+  },
+  {
+   "id": "samm_ci_low_045",
+   "description": "Lower 95% Wilson bound of SAMM alignment at NA 0.45, in percent",
+   "expr": "samm_ci_low_045_raw * 100",
+   "format": "{:.1f}",
+   "snippets": [
+    "({v}–"
+   ],
+   "expect": "97.2",
+   "cited_in": [
+    "README.md",
+    "docs/src/white-paper.md",
+    "docs/src/technical-note-TN-001.md"
+   ]
+  },
+  {
+   "id": "white_led_pitch_025",
+   "description": "SAMM pitch at NA 0.25 under white light (550 nm)",
+   "expr": "1.1 * 0.55 / 0.25",
+   "format": "{:.2f}",
+   "snippets": [
+    "{v} µm"
+   ],
+   "expect": "2.42",
+   "cited_in": [
+    "ERRATA.md",
+    "docs/src/technical-note-TN-001.md"
+   ]
+  },
+  {
+   "id": "white_led_density_factor",
+   "description": "SAMM density factor at 550 nm relative to 405 nm",
+   "expr": "(0.405 / 0.55) ** 2",
+   "format": "{:.2f}",
+   "snippets": [
+    "{v}×",
+    "about {v}"
+   ],
+   "expect": "0.54",
+   "cited_in": [
+    "README.md",
+    "docs/src/white-paper.md"
+   ]
+  },
+  {
+   "id": "apsk16_best_density_j5",
+   "description": "apsk16: best density over pitches at 5% writing variability (300 nm)",
+   "file": "sensitivity.json",
+   "path": [
+    {
+     "alphabet": "apsk16",
+     "fab_jitter": 0.05,
+     "pitch_um": 0.3
+    },
+    "density_bits_per_um2"
+   ],
+   "format": "{:.1f}",
+   "snippets": [
+    "{v} bits/µm²"
+   ],
+   "expect": "44.4",
+   "cited_in": [
+    "docs/src/white-paper.md"
+   ]
+  },
+  {
+   "id": "apsk16_best_density_j20",
+   "description": "apsk16: best density over pitches at 20% writing variability (300 nm)",
+   "file": "sensitivity.json",
+   "path": [
+    {
+     "alphabet": "apsk16",
+     "fab_jitter": 0.2,
+     "pitch_um": 0.3
+    },
+    "density_bits_per_um2"
+   ],
+   "format": "{:.1f}",
+   "snippets": [
+    "{v} bits/µm²"
+   ],
+   "expect": "33.0",
+   "cited_in": [
+    "docs/src/white-paper.md"
+   ]
+  },
+  {
+   "id": "wedge_best_density_j5",
+   "description": "wedge256: best density over pitches at 5% writing variability (500 nm)",
+   "file": "sensitivity.json",
+   "path": [
+    {
+     "alphabet": "wedge256",
+     "fab_jitter": 0.05,
+     "pitch_um": 0.5
+    },
+    "density_bits_per_um2"
+   ],
+   "format": "{:.1f}",
+   "snippets": [
+    "{v} bits/µm²"
+   ],
+   "expect": "29.2",
+   "cited_in": [
+    "docs/src/white-paper.md"
+   ]
+  },
+  {
+   "id": "wedge_best_density_j20",
+   "description": "wedge256: best density over pitches at 20% writing variability (500 nm)",
+   "file": "sensitivity.json",
+   "path": [
+    {
+     "alphabet": "wedge256",
+     "fab_jitter": 0.2,
+     "pitch_um": 0.5
+    },
+    "density_bits_per_um2"
+   ],
+   "format": "{:.1f}",
+   "snippets": [
+    "{v} bits/µm²"
+   ],
+   "expect": "19.6",
+   "cited_in": [
+    "docs/src/white-paper.md"
+   ]
+  }
+ ]
+}

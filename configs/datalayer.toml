@@ -1,0 +1,4 @@
+# Data-layer study exactly as published in v1.0 (results/lattice_*, sensitivity, spread, rle, skew).
+# python -m vods run datalayer --config configs/datalayer.toml      (~30 min on 2 cores)
+experiment = "all"
+trials = 2000

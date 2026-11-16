@@ -4,15 +4,57 @@ on:
   push:
   pull_request:
 
+permissions:
+  contents: read
+
 jobs:
-  test:
+  lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
-      - name: Install dependencies
-        run: pip install -r requirements.txt
-      - name: Unit tests
-        run: pytest -q tests
+          python-version: "3.13"
+      - run: pip install "ruff>=0.5"
+      - name: Ruff (style and common errors)
+        run: ruff check .
+
+  test:
+    needs: lint
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+      - run: pip install -r requirements.txt pytest-cov
+      - name: Unit, validation, regression and consistency tests
+        run: pytest -q --cov --cov-report=term --cov-report=xml
+      - uses: actions/upload-artifact@v4
+        if: matrix.python-version == '3.13'
+        with:
+          name: coverage
+          path: coverage.xml
+
+  reference-environment:
+    # The exact versions that produced the published results.
+    needs: lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: pip install -r requirements-lock.txt
+      - run: python -m vods validate
+      - run: python -m vods manifest
+      - run: python -m vods check
+      - name: Smoke run of both simulators
+        run: |
+          python -m vods run datalayer --quick --experiment rle
+          python -m vods run samm --quick --na 0.45

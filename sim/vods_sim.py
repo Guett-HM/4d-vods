@@ -34,12 +34,12 @@ Usage:
   python3 vods_sim.py rle|skew|sensitivity|spread|lattice:0.3,0.5|extra:0.3
 """
 import json
+import lzma
 import math
 import os
 import sys
 import time
 import zlib
-import lzma
 
 import numpy as np
 
@@ -435,7 +435,7 @@ if __name__ == "__main__":
     which = sys.argv[1] if len(sys.argv) > 1 else "all"
     QUICK = os.environ.get("QUICK") == "1"      # smoke run: few trials, 2 pitches
     ALL_P = [0.3, 0.5] if QUICK else [0.15, 0.2, 0.25, 0.3, 0.4, 0.5, 0.6, 0.8]
-    NTR = 60 if QUICK else 2000
+    NTR = int(os.environ.get("TRIALS", "60" if QUICK else "2000"))
     if which in ("all", "sensitivity"):
         json.dump(run_sensitivity(ALL_P, NTR), open(os.path.join(OUT, "sensitivity.json"), "w"), indent=1)
     if which in ("all", "spread"):

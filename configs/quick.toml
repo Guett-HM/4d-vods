@@ -1,0 +1,4 @@
+# Smoke run for both studies: a few trials, output in results_quick/ (numbers not meaningful).
+# python -m vods run datalayer --config configs/quick.toml
+# python -m vods run samm --config configs/quick.toml
+quick = true

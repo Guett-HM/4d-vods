@@ -1,0 +1,13 @@
+{
+ "wedge_p500_errors": 5,
+ "wedge_p500_symbol_sum": 11269,
+ "apsk16_p300_errors": 4,
+ "apsk16_template_energy": 207.23290258528002,
+ "apsk16_template_centre_re": -0.5703883171081543,
+ "apsk16_template_centre_im": -0.38112130761146545,
+ "samm_trial_errors": 0,
+ "samm_trial_aligned": true,
+ "samm_trial_max_cell_error": 0.18630914419072658,
+ "samm_trial_level_sum": 797,
+ "rle_symbols_text": 522
+}

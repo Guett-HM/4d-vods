@@ -2,7 +2,8 @@ cff-version: 1.2.0
 message: "If you use this software or its results, please cite it as below."
 type: software
 title: "4D-VODS: optical data storage in glass with a self-aligning code for low-cost readers"
-version: 1.0.0
+version: 1.1.0
+date-released: "2026-11-16"
 doi: 10.5281/zenodo.24268721
 authors:
   - family-names: Guettal
@@ -12,8 +13,8 @@ repository-code: "https://github.com/GuettHM/4d-vods"
 url: "https://guetthm.github.io/4d-vods/"
 abstract: >-
   Open simulator and documents for a concept of archival optical data storage
-  in glass. It compares an 8-bit asymmetric "Voxel-Wedge" symbol with isotropic
-  amplitude/phase (APSK-16) dots under realistic diffraction-limited optics,
+  in glass. It compares an 8-bit asymmetric "Voxel-Wedge" symbol with small
+  amplitude/phase (APSK-16) dots under diffraction-limited optics,
   and introduces a Self-Aligning Micro-Matrix (SAMM) code that a low-cost
   bright-field microscope camera can find, orient and decode at any rotation.
   The author is not a professional physicist; the study was built with the help
