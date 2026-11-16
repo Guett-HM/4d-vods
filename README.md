@@ -146,8 +146,12 @@ Use the "Cite this repository" button on GitHub (from `CITATION.cff`) or:
 
 > Guettal, H. (2026). *4D-VODS: optical data storage in glass with a self-aligning code for low-cost readers* (v1.1.0). Zenodo. https://doi.org/10.5281/zenodo.24268721
 
-This concept DOI always resolves to the latest version; the DOI of each version is on its
-Zenodo page (v1.0.0: https://doi.org/10.5281/zenodo.24268722).
+This concept DOI always resolves to the latest version. To cite one exact version:
+
+| Version | DOI |
+| --- | --- |
+| 1.1.0 | https://doi.org/10.5281/zenodo.24275029 |
+| 1.0.0 | https://doi.org/10.5281/zenodo.24268722 |
 
 ## Use of AI tools
 
