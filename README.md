@@ -1,5 +1,7 @@
 # 4D-VODS
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24268721.svg)](https://doi.org/10.5281/zenodo.24268721)
+
 **Optical data storage in glass with a self-aligning code for low-cost readers – an open simulation study**
 
 Hakim Guettal · v1.0.0 · Code: MIT · Documents and figures: CC BY 4.0
@@ -111,7 +113,9 @@ and a low-cost, self-aligning reading layer. See section 5 of the white paper.
 Use the "Cite this repository" button on GitHub (from `CITATION.cff`) or the Zenodo DOI
 shown on the release page.
 
-> Guettal, H. (2026). *4D-VODS: optical data storage in glass with a self-aligning code for low-cost readers* (v1.0.0). Zenodo.
+> Guettal, H. (2026). *4D-VODS: optical data storage in glass with a self-aligning code for low-cost readers* (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.24268722
+
+To cite all versions, use the concept DOI https://doi.org/10.5281/zenodo.24268721.
 
 ## Use of AI tools
 

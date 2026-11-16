@@ -3,6 +3,7 @@ message: "If you use this software or its results, please cite it as below."
 type: software
 title: "4D-VODS: optical data storage in glass with a self-aligning code for low-cost readers"
 version: 1.0.0
+doi: 10.5281/zenodo.24268721
 authors:
   - family-names: Guettal
     given-names: Hakim
