@@ -75,3 +75,34 @@ bits/µm² depends on the wavelength. With white-LED light (about 550 nm) the pi
 is 2.42 µm instead of 1.78 µm, and densities scale by (405/550)² ≈ 0.54.
 **Results:** alignment and error rates unchanged; tables now name the reader by NA and
 state the wavelength.
+
+## Limits found after v1.1.0 (not yet in a release)
+
+These were found on 17 November 2026 while preparing the successor project
+[CUNEUS](https://github.com/GuettHM/cuneus) (doi:10.5281/zenodo.24325753). The files in
+`results/` are not regenerated; the entries say which published numbers they affect.
+
+### E6. Results at 250 nm and below are slightly flattered by the small simulated grid
+
+**Was:** data-layer results come from 7 × 7 grids of symbols with only the central 3 × 3
+scored (White Paper section 8). At 250 nm the practical decoder gives 35.3 bits/µm².
+**Correct:** outside the 7 × 7 grid there are no symbols, so the scored symbols see less
+interference than they would inside a full lattice. Running the same decoder on larger grids
+gives 33.0 bits/µm² on 15 × 15 grids and 34.1 bits/µm² on 19 × 19 grids at 250 nm, about
+3–7% lower. At 300 nm the published value holds: 42.2 and 42.8 bits/µm² against 42.6.
+**Results:** the headline (APSK-16 at 300 nm, 42.6 bits/µm²) and the ranking of the
+alphabets are unchanged; the APSK-16 values below 300 nm in Figure 1 and the results tables
+are slightly optimistic. CUNEUS simulates a periodic lattice with no edges and replaces them.
+
+### E7. Defocus was not modelled; the SAMM reader needs a focus sweep
+
+**Was:** the SAMM results (199–200 of 200 frames aligned) assume a reader exactly in focus;
+defocus was listed as not modelled.
+**Correct:** with the same SAMM-24 frames at NA 0.45 (depth of focus λ/NA² = 2.0 µm at
+405 nm), exact non-paraxial defocus and a decoder unaware of it, 40 randomly rotated frames
+per point: at pitch 1.1 × λ/NA, 40/40 frames align at half a depth of focus (symbol error
+0.14%), 34/40 at one depth of focus (14.8%) and 3/40 at 1.5. At pitch 1.4 × λ/NA, 39/40
+align at one depth of focus (1.3%).
+**Results:** the in-focus results are unchanged. A reader without a focus stage must take a
+short focus sweep (images about half a depth of focus apart) and decode the sharpest, or use
+a pitch about 27% larger; the low-cost tier of CUNEUS includes both.

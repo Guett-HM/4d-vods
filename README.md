@@ -22,7 +22,15 @@ The project page is at **https://guetthm.github.io/4d-vods/**. This repository c
 simulator, the raw results behind every number, and two documents:
 [White Paper v1.1](docs/4D-VODS_White_Paper_v1.1.pdf) and
 [Technical Note TN-001 rev. 1.1](docs/4D-VODS_Technical_Note_TN-001.pdf).
-Corrections to earlier versions are listed in [ERRATA.md](ERRATA.md).
+Corrections to earlier versions are listed in [ERRATA.md](ERRATA.md), including two limits
+found after v1.1.0 (E6: results at 250 nm and below are slightly optimistic; E7: the SAMM
+reader needs a focus sweep).
+
+**Successor:** [CUNEUS](https://github.com/GuettHM/cuneus)
+([doi:10.5281/zenodo.24325753](https://doi.org/10.5281/zenodo.24325753)) starts from the
+lessons of this study: data are carried by the field rather than by the shape of the symbol,
+the lattice, alphabet and decoder are computed from the optics of the reader, and the
+simulation uses a periodic lattice with no edges, a learnt optical response and defocus.
 
 > **Status: concept, simulation only (TRL 2).** No physical sample has been written or read.
 > The results compare design options under the same modelled physics; they are not
@@ -129,8 +137,9 @@ random rotation, scale and illumination errors, practical decoders.
 
 Not modelled: real laser–glass interaction and shape fidelity, vectorial optics at high NA,
 defocus and tilt, lens distortion and colour sensors, multilayer cross-talk,
-error-correction codes, speed and cost. See section 16 of the white paper and
-[ERRATA.md](ERRATA.md) (E4) for the physical medium each result applies to.
+error-correction codes, speed and cost. See section 16 of the white paper,
+[ERRATA.md](ERRATA.md) (E4) for the physical medium each result applies to, and E6–E7 for
+the grid size and defocus checks made after v1.1.0.
 
 ## Related work
 

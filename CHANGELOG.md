@@ -3,6 +3,15 @@
 All notable changes to this project are listed here. Versions follow
 [Semantic Versioning](https://semver.org/).
 
+## Unreleased
+
+### Documented (details in ERRATA.md)
+- E6: data-layer results at 250 nm and below are 3–7% optimistic because of the 7 × 7 grid;
+  the 300 nm headline (42.6 bits/µm²) holds on 15 × 15 and 19 × 19 grids.
+- E7: SAMM with defocus: half a depth of focus at pitch 1.1 × λ/NA, one depth of focus at
+  1.4 × λ/NA; a reader without a focus stage needs a focus sweep.
+- README and project page point to the successor project CUNEUS.
+
 ## [1.1.0] – consolidation
 
 No new physics: every result of 1.0.0 is unchanged. This release corrects the text, makes
