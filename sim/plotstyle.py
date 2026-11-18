@@ -34,7 +34,7 @@ plt.rcParams.update({
     "axes.facecolor": SURF, "savefig.facecolor": SURF, "legend.frameon": False,
     "text.color": INK, "pdf.fonttype": 42, "svg.fonttype": "none",
 })
-PDF_META = {"Creator": "4D-VODS sim/plotstyle.py", "Author": "Hakim Guettal", "CreationDate": None}
+PDF_META = {"Creator": "4D-VODS sim/plotstyle.py", "Author": "H. Guettal", "CreationDate": None}
 
 
 def title(ax, text, size=11.5):

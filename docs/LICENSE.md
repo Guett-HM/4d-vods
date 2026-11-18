@@ -1,6 +1,6 @@
 # License for the documents in `docs/` and the figures in `figures/`
 
-Copyright (c) 2026 Hakim Guettal.
+Copyright (c) 2026 H. Guettal.
 
 The white paper, the technical note and the figures are licensed under the
 **Creative Commons Attribution 4.0 International License (CC BY 4.0)**.

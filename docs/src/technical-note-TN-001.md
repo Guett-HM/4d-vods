@@ -2,11 +2,11 @@
 
 System specification rev. 1.1 – data layer and self-aligning micro-matrix (SAMM) layer
 
-**Hakim Guettal** · Revision 1.1, November 2026 · Text: CC BY 4.0 · Code: MIT License
+**H. Guettal** · Revision 1.1, November 2026 · Text: CC BY 4.0 · Code: MIT License
 
 *I am not a professional physicist. 4D-VODS started as a geometric intuition (storing data in the shape of engraved symbols) and grew into this conceptual study and simulator, built with the help of AI tools on standard diffraction optics. Corrections from specialists are very welcome.*
 
-Nov 15, 2026 · @Hakim
+Nov 15, 2026 · H. Guettal
 
 ## 1. Scope and status
 

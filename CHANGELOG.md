@@ -7,12 +7,18 @@ All notable changes to this project are listed here. Versions follow
 
 ### Moved
 - Repository moved to https://github.com/Guett-HM/4d-vods after the former account (GuettHM) was
-  closed; project page now at https://guett-hm.github.io/4d-vods/. Links updated everywhere except
-  inside the two PDF documents, which keep the former address. The Zenodo DOIs are unchanged.
+  closed; project page now at https://guett-hm.github.io/4d-vods/. Links updated everywhere,
+  including the two PDF documents. The Zenodo DOIs are unchanged.
 - The history before the v1.0.0 commit could not be carried over, and release tags were not
   carried over; versions 1.0.0 and 1.1.0 are archived on Zenodo (doi:10.5281/zenodo.24268722 and
-  doi:10.5281/zenodo.24275029). Version 1.0.0 is commit ba90ccc; version 1.1.0 was released after
-  commit 4e2f128, the last commit before its DOI was added.
+  doi:10.5281/zenodo.24275029). Version 1.0.0 is commit df736df; version 1.1.0 was released after
+  commit f7a76a1, the last commit before its DOI was added.
+
+### Changed
+- Author name written as "H. Guettal" (citation "Guettal, H.") in CITATION.cff, .zenodo.json,
+  pyproject.toml, the licences, the README, the project page, the document sources, the two PDF
+  documents and the figure metadata. The author name in the commit history was changed the same
+  way, so every commit identifier changed; the identifiers above are the new ones.
 
 ### Documented (details in ERRATA.md)
 - E6: data-layer results at 250 nm and below are 3–7% optimistic because of the 7 × 7 grid;

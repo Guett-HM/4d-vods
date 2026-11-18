@@ -5,7 +5,7 @@
 
 **Optical data storage in glass with a self-aligning code for low-cost readers – an open simulation study**
 
-Hakim Guettal · v1.1.0 · Code: MIT · Documents and figures: CC BY 4.0
+H. Guettal · v1.1.0 · Code: MIT · Documents and figures: CC BY 4.0
 
 *I am not a professional physicist. 4D-VODS started as a geometric intuition (storing data in the shape of engraved symbols) and grew into this conceptual study and simulator, built with the help of AI tools on standard diffraction optics. Corrections from specialists are very welcome.*
 

@@ -2,11 +2,11 @@
 
 Multi-state optical archival storage in glass, with a self-aligning 2D code for low-cost readers: concept and simulation study
 
-**Hakim Guettal** · Version 1.1, November 2026 · Text and figures: CC BY 4.0 · Code: MIT License
+**H. Guettal** · Version 1.1, November 2026 · Text and figures: CC BY 4.0 · Code: MIT License
 
 *I am not a professional physicist. 4D-VODS started as a geometric intuition (storing data in the shape of engraved symbols) and grew into this conceptual study and simulator, built with the help of AI tools on standard diffraction optics. Corrections from specialists are very welcome.*
 
-Nov 15, 2026 · @Hakim
+Nov 15, 2026 · H. Guettal
 
 ## 1. Executive summary
 
