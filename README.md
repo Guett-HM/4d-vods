@@ -21,8 +21,7 @@ written by the same femtosecond laser:
 The project page is at **https://guett-hm.github.io/4d-vods/**. This repository contains the
 simulator, the raw results behind every number, and two documents:
 [White Paper v1.1](docs/4D-VODS_White_Paper_v1.1.pdf) and
-[Technical Note TN-001 rev. 1.1](docs/4D-VODS_Technical_Note_TN-001.pdf). The two PDFs were
-printed before the repository moved and cite its former address, github.com/GuettHM/4d-vods.
+[Technical Note TN-001 rev. 1.1](docs/4D-VODS_Technical_Note_TN-001.pdf).
 Corrections to earlier versions are listed in [ERRATA.md](ERRATA.md), including two limits
 found after v1.1.0 (E6: results at 250 nm and below are slightly optimistic; E7: the SAMM
 reader needs a focus sweep).
