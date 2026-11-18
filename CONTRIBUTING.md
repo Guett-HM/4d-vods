@@ -8,7 +8,7 @@ that was missed. You do not need to send code for that; a short issue is enough.
 
 | You are… | Most useful contribution |
 | --- | --- |
-| An optics or laser-writing specialist | A [physics correction](https://github.com/GuettHM/4d-vods/issues/new?template=physics_correction.yml): what the model gets wrong and how much it matters |
+| An optics or laser-writing specialist | A [physics correction](https://github.com/Guett-HM/4d-vods/issues/new?template=physics_correction.yml): what the model gets wrong and how much it matters |
 | A coding-theory or 2D-code specialist | Review of the error-correction plan (TN-001 section 4.4) and of the SAMM layout |
 | A developer | Bug reports, tests, faster code, the open items in `CHANGELOG.md` |
 | Anyone | Questions about anything that is unclear: unclear text is a bug too |
@@ -31,7 +31,7 @@ that was missed. You do not need to send code for that; a short issue is enough.
 ## Set-up
 
 ```bash
-git clone https://github.com/GuettHM/4d-vods && cd 4d-vods
+git clone https://github.com/Guett-HM/4d-vods && cd 4d-vods
 pip install -e ".[dev]"          # or: pip install -r requirements-lock.txt
 pytest -q                        # about 1 minute
 python -m vods validate          # physics validation checks

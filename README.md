@@ -1,7 +1,7 @@
 # 4D-VODS
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24268721.svg)](https://doi.org/10.5281/zenodo.24268721)
-[![tests](https://github.com/GuettHM/4d-vods/actions/workflows/tests.yml/badge.svg)](https://github.com/GuettHM/4d-vods/actions/workflows/tests.yml)
+[![tests](https://github.com/Guett-HM/4d-vods/actions/workflows/tests.yml/badge.svg)](https://github.com/Guett-HM/4d-vods/actions/workflows/tests.yml)
 
 **Optical data storage in glass with a self-aligning code for low-cost readers – an open simulation study**
 
@@ -18,15 +18,16 @@ written by the same femtosecond laser:
   ordinary bright-field microscope camera can find, orient and decode at any rotation,
   with no positioning stage.
 
-The project page is at **https://guetthm.github.io/4d-vods/**. This repository contains the
+The project page is at **https://guett-hm.github.io/4d-vods/**. This repository contains the
 simulator, the raw results behind every number, and two documents:
 [White Paper v1.1](docs/4D-VODS_White_Paper_v1.1.pdf) and
-[Technical Note TN-001 rev. 1.1](docs/4D-VODS_Technical_Note_TN-001.pdf).
+[Technical Note TN-001 rev. 1.1](docs/4D-VODS_Technical_Note_TN-001.pdf). The two PDFs were
+printed before the repository moved and cite its former address, github.com/GuettHM/4d-vods.
 Corrections to earlier versions are listed in [ERRATA.md](ERRATA.md), including two limits
 found after v1.1.0 (E6: results at 250 nm and below are slightly optimistic; E7: the SAMM
 reader needs a focus sweep).
 
-**Successor:** [CUNEUS](https://github.com/GuettHM/cuneus)
+**Successor:** [CUNEUS](https://github.com/Guett-HM/cuneus)
 ([doi:10.5281/zenodo.24325753](https://doi.org/10.5281/zenodo.24325753)) starts from the
 lessons of this study: data are carried by the field rather than by the shape of the symbol,
 the lattice, alphabet and decoder are computed from the optics of the reader, and the
@@ -170,5 +171,5 @@ result comes from the code in this repository and can be checked by re-running i
 ## Contributing
 
 Corrections are the most useful contribution: see [CONTRIBUTING.md](CONTRIBUTING.md) and the
-[physics correction](https://github.com/GuettHM/4d-vods/issues/new?template=physics_correction.yml)
+[physics correction](https://github.com/Guett-HM/4d-vods/issues/new?template=physics_correction.yml)
 issue form. Please follow the [code of conduct](CODE_OF_CONDUCT.md).

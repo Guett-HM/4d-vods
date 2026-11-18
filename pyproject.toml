@@ -17,8 +17,8 @@ test = ["pytest>=7.0", "pytest-cov>=4.0"]
 dev = ["pytest>=7.0", "pytest-cov>=4.0", "ruff>=0.5"]
 
 [project.urls]
-Homepage = "https://guetthm.github.io/4d-vods/"
-Repository = "https://github.com/GuettHM/4d-vods"
+Homepage = "https://guett-hm.github.io/4d-vods/"
+Repository = "https://github.com/Guett-HM/4d-vods"
 DOI = "https://doi.org/10.5281/zenodo.24268721"
 
 [project.scripts]

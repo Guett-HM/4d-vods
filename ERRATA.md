@@ -79,7 +79,7 @@ state the wavelength.
 ## Limits found after v1.1.0 (not yet in a release)
 
 These were found on 17 November 2026 while preparing the successor project
-[CUNEUS](https://github.com/GuettHM/cuneus) (doi:10.5281/zenodo.24325753). The files in
+[CUNEUS](https://github.com/Guett-HM/cuneus) (doi:10.5281/zenodo.24325753). The files in
 `results/` are not regenerated; the entries say which published numbers they affect.
 
 ### E6. Results at 250 nm and below are slightly flattered by the small simulated grid

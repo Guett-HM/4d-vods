@@ -5,6 +5,15 @@ All notable changes to this project are listed here. Versions follow
 
 ## Unreleased
 
+### Moved
+- Repository moved to https://github.com/Guett-HM/4d-vods after the former account (GuettHM) was
+  closed; project page now at https://guett-hm.github.io/4d-vods/. Links updated everywhere except
+  inside the two PDF documents, which keep the former address. The Zenodo DOIs are unchanged.
+- The history before the v1.0.0 commit could not be carried over, and release tags were not
+  carried over; versions 1.0.0 and 1.1.0 are archived on Zenodo (doi:10.5281/zenodo.24268722 and
+  doi:10.5281/zenodo.24275029). Version 1.0.0 is commit ba90ccc; version 1.1.0 was released after
+  commit 4e2f128, the last commit before its DOI was added.
+
 ### Documented (details in ERRATA.md)
 - E6: data-layer results at 250 nm and below are 3–7% optimistic because of the 7 × 7 grid;
   the 300 nm headline (42.6 bits/µm²) holds on 15 × 15 and 19 × 19 grids.

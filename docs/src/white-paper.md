@@ -316,7 +316,7 @@ The next step is a stricter simulation, then a single experiment on real glass d
 
 ## 18. Appendix: reproducibility and sources
 
-Every number and figure in this paper is produced by the open-source repository github.com/GuettHM/*4d-vods* (code: MIT License; text and figures: CC BY 4.0). A full run takes about one hour on a 2-core computer with Python 3, numpy, scipy and matplotlib.
+Every number and figure in this paper is produced by the open-source repository github.com/Guett-HM/*4d-vods* (code: MIT License; text and figures: CC BY 4.0). A full run takes about one hour on a 2-core computer with Python 3, numpy, scipy and matplotlib.
 
 pip install -r requirements.txt \# exact versions: requirements-lock.txt  
 pytest -q \# ~50 tests, about 1 minute  
